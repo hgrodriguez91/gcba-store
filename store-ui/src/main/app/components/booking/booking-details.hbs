@@ -1,0 +1,24 @@
+<div class="container">
+    <header>
+        <h1><i class="fa fa-check-circle"></i> {{t 'booking.details.thanks.title'}}</h1>
+        <p>{{t 'booking.details.thanks.next-minutes'}}</p>
+    </header>
+    <div class="row" style="display: none;">
+        <div class="col-md-10 col-lg-9 voucher-info">
+            <div id="order-resume-container"></div>
+        </div>
+    </div>
+    <hr/>
+    <div class="row order-important">
+        <div class="col-xs-12">
+            <h2 class="h1">{{t 'booking.details.important.title'}}</h2>
+            {{#isnt paymentExternalId '0'}}
+                <h4><span class="icon">!</span> {{t 'booking.details.important.payment.title'}}</h4>
+                <p>{{t 'booking.details.important.payment.mercado-pago' paymentExternalId=paymentExternalId}}</p>
+                <p>{{t 'booking.details.important.payment.disclaimer'}}</p>
+            {{/isnt}}
+            <h4><span class="icon">!</span> {{t 'booking.details.important.changes.title'}}</h4>
+            <p>{{t 'booking.details.important.changes.body'}}</p>
+        </div>
+    </div>
+</div>

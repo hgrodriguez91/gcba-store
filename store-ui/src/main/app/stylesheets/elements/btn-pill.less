@@ -1,0 +1,42 @@
+.btn-pill {
+  border-radius: 3px;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  background-color: @blue-zelzet;
+  padding: 2px 20px 2px 7px;
+  text-decoration: none;
+  font-size: 1em;
+  .break(sm, {
+    font-size: 0.9em;
+  });
+  &.btn-pill-lg {
+    padding: 2px 7px 3px 7px;
+    font-size: 1em;
+  }
+  i {
+   padding-right: 9px;
+   vertical-align: baseline;
+   &.icon-right {
+     position: absolute;
+     right: 5px;
+     top: 4px;
+     padding-right: 0;
+     padding-left: 9px;
+   }
+  }
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: darken(@blue-zelzet, 5%);
+  }
+  &:active {
+    text-decoration: none;
+    color: #fff;
+    background-color: lighten(@blue-zelzet, 15%);
+  }
+  &:focus {
+    text-decoration: none;
+    color: #fff;
+    background-color: darken(@blue-zelzet, 5%);
+  }
+}

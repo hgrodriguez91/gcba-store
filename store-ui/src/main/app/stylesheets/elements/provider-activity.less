@@ -1,0 +1,129 @@
+.provider-activity {
+  border: @blue-zelzet solid 1px;
+  margin-bottom: 10px;
+
+  .media-left {
+    border-right: @blue-zelzet solid 1px;
+    padding-right: 0;
+
+    a {
+      display: block;
+      position: relative;
+
+      .media-object {
+        display: block;
+        height: 75px;
+        width: 75px;
+
+        .break(md, {
+          height: 90px;
+          width: 90px;
+        });
+      }
+
+      .date {
+        position: absolute;
+        text-align: center;
+        background-color: rgba(0,0,0,.4);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        color: #ffffff;
+        line-height: 1.2;
+
+        .day {
+          padding-top: 15px;
+          display: block;
+          font-size: 25px;
+
+          .break(md, {
+            font-size: 40px;
+            line-height: 1;
+          });
+        }
+
+        .month {
+          display: block;
+          font-size: 14px;
+
+          .break(md, {
+            font-size: 18px;
+          });
+        }
+      }
+    }
+  }
+
+  .media-body {
+    padding: 10px 10px 0;
+    font-size: 12px;
+
+    .fa {
+      color: #888e99;
+    }
+
+    .break(md, {
+      padding: 15px 15px 0;
+      font-size: 14px;
+    });
+
+    .media-heading {
+      font-size: 13px;
+      margin: 0 0 5px;
+      .font-medium;
+      color: @blue-2;
+
+      .break(md, {
+        font-size: 16px;
+      });
+
+      a {
+        color: inherit;
+
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .media-actions {
+    display: table-cell;
+    vertical-align: middle;
+
+    a {
+      display: inline-block;
+      padding: 10px;
+      text-align: center;
+      .font-medium;
+
+      .break(md, {
+        padding-left: 15px;
+        padding-right: 15px;
+      });
+
+      .icon {
+        display: block;
+      }
+    }
+  }
+
+  &.provider-activity-editable {
+    .media-actions {
+      .break(md, {
+        display: none;
+      });
+    }
+
+    &:hover {
+      background: #ecf3f6;
+
+      .media-actions {
+        .break(md, {
+          display: table-cell;
+        });
+      }
+    }
+  }
+}

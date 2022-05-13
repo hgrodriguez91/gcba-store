@@ -1,0 +1,27 @@
+.our-socials {
+  margin-bottom: @grid-gutter-width;
+
+  .break(md, {
+    margin-bottom: (@grid-gutter-width * 2);
+  });
+
+  .title {
+    margin-bottom: 0;
+  }
+
+  .nav {
+    font-size: 25px;
+
+    .break(md, {
+      font-size: 40px;
+    });
+
+    & > li {
+      display: inline-block;
+
+      > a {
+        color: @blue-2;
+      }
+    }
+  }
+}

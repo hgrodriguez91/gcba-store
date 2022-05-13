@@ -1,0 +1,342 @@
+<section class="activity-detail">
+	<header class="activity-header {{#if widget}}side-brand{{/if}}">
+		<div class="container">
+			<div class="activity-header-nav">
+				<span class="category"><a href="{{listingURL category=activity.attributes.category.public_code}}" rel="nofollow">{{activity.attributes.category.name}}</a></span> <span style="color:#000;">|</span> <span class="location"><a href="{{listingURL location=activity.attributes.location.public_code}}" rel="nofollow">{{activity.attributes.location.name}}</a></span>
+			</div>
+			<h1>{{activity.attributes.title}}</h1>
+            {{#if widget}}
+                <div class="activity-details-tripadvisor">
+                    <iframe id="tripadvisor-widget" scrolling="no" frameborder="0" src="{{baseURL}}activity/{{activity.attributes.code}}/tripadvisor-rating"></iframe>
+                </div>
+            {{/if}}
+		</div>
+        <!--<nav class="breadcrumbs">
+            <div class="container">
+                <ul class="list-inline">
+                    <li><a href="{{#if goBackURL}}{{goBackURL}}{{else}}{{listingURL category=activity.attributes.category.public_code location=activity.attributes.location.public_code}}{{/if}}" rel="nofollow">{{t 'listing.go-back'}}</a></li>
+                    {{#each activity.attributes.breadcrumbs}}
+                        <li><a href="{{this.url}}" rel="nofollow">{{this.name}}</a></li>
+                    {{/each}}
+                </ul>
+            </div>
+        </nav>-->
+	</header>
+
+	<div class="bg-box">
+		<div class="container">
+			<div id="activityActive">
+				<div class="alert alert-info">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-1 text-center">
+							<span class="glyphicon glyphicon-info-sign" style="font-size:25px;"></span>
+						</div>
+						<div class="col-md-5 message-active">
+							<span>{{t 'activity.checkout.active-false'}}</span>
+						</div>
+						<div class="col-md-6"></div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-7 col-md-8">
+					<!-- ActivityGallery -->
+					<div class="activity-gallery">
+						<div class="slider">
+							<div class="slider-scroll">
+								<ul class="clearfix">
+								{{#each activity.attributes.photos as |photo|}}
+									{{#if photo.code}}
+											<li data-toggle="lightbox" data-gallery="imagesizes" data-remote="{{photo.link}}" style="background: url('{{photo.link}}') no-repeat center center / cover;"></li>
+										{{else}}
+											<li data-toggle="lightbox" data-gallery="imagesizes" data-remote="{{photo.link}}" >
+												<div class="video-responsive">
+													<iframe src="{{photo.link}}" frameborder="0" allowfullscreen></iframe>
+												</div>
+											</li>
+									{{/if}}
+								{{/each}}
+								</ul>
+							</div>
+							<div class="navigation">
+								<a href="#" class="navigation-btn prev"><i class="fa fa-angle-left"></i></a> 
+								<a href="#" class="navigation-btn next"><i class="fa fa-angle-right"></i></a>
+							</div>
+                            <i class="fa fa-search-plus"></i>
+                            {{#activityShowDiscount activity.attributes.discount}}
+                                <div class="booking-percentage-badge">
+                                    <p class="booking-percentage-legend"><span class="booking-percentage">{{activity.attributes.discount}}% OFF</span>{{activity.attributes.discountFromMonth}} - {{activity.attributes.discountToMonth}}</p>
+                                </div>
+                            {{/activityShowDiscount}}
+                            {{!-- {{#activityShowBookingPercentage activity.attributes.paymentPercentageOnline}}
+                                <div class="booking-percentage-badge">
+                                    <p class="booking-percentage-legend"><span class="booking-percentage">{{activity.attributes.paymentPercentageOnline}}%</span>{{t 'activity.details.online-booking'}}</p>
+                                </div>
+                            {{/activityShowBookingPercentage}} --}}
+						</div>
+						<div class="nav-thumbs">
+							<ul class="list-unstyled clearfix">
+								{{#each activity.attributes.photos as |photo|}}
+									{{#if photo.code}}
+										<li><a id="thumb_{{add @index 1}}" href="#" style="background: url('{{photo.link}}') no-repeat center center / cover;" class="{{#if photo.default}}sp-selected{{/if}}"></a></li>
+									{{else}}
+										<li><a id="thumb_{{add @index 1}}" href="#" style="background: url('assets/img/youtube.png') no-repeat center center, url('{{photo.linkVideo}}') no-repeat center center / cover;"></a></li>
+									{{/if}}
+								{{/each}}
+							</ul>
+							
+						</div>
+					</div>
+		
+					<!-- /ActivityGallery -->
+					<div class="visible-xs">
+						<!-- ActivityReserveButton -->
+						<div class="activity-reserve-button">
+							<button id="middle-submit" class="btn btn-primary btn-lg btn-block btn-icon-right"><span class="btn-icon"><i class="fa fa-angle-right"></i></span>{{#if available}}{{t 'activity.details.book-now'}}{{else}}{{t 'activity.details.coming-soon'}}{{/if}}</button>
+						</div>
+						<!-- /ActivityReserveButton -->
+					</div>
+					<hr/>
+					<!-- ActivityBody -->
+					<div class="activity-body">
+                        <h2 class="activity-title">{{html_decoder activity.attributes.description}}</h2>
+						<p class="description">{{{activity.attributes.details}}}</p>
+						<p class="cancelation">{{t 'activity.details.difficulty'}}:{{t activity.attributes.difficulty}}.</p>
+						<p class="cancelation"><strong>{{t 'activity.details.duration'}}</strong>: {{activity.attributes.duration.value}} {{t activity.attributes.duration.type}}.</p>
+						<p class="cancelation"><strong>{{t 'activity.details.cancelation'}}</strong>: <a id="show-cancelation-policies" href="#">{{t activity.attributes.cancelationPolicy}}<i class="glyphicon glyphicon-question-sign"></i></a></p>
+						<p class="cancelation"><strong>{{t 'activity.details.confirmation'}}</strong>: <a id="show-confirmation-types" href="#">{{t activity.attributes.confirmationType}}<i class="glyphicon glyphicon-question-sign"></i></a></p>
+						<hr/>
+
+						{{#gt activity.attributes.options.length 0}}
+							<h3 class="title-3rd">{{t 'activity.details.available-options'}}</h3>
+							<ul class="list-unstyled">
+								{{#each activity.attributes.options.models as |option|}}
+									<li class="activity-option">
+                                        <header>
+    										<h4 class="h4">{{option.attributes.title}}</h4>
+                                            <button class="btn btn-primary btn-option-check-availability price" id="option_{{@index}}_{{option.attributes.code}}">{{activityPrice option.attributes.marketingPrice maximumFractionDigits="0"}} · {{#if ../../available}}{{t 'activity.details.select'}}{{else}}{{t 'activity.details.coming-soon'}}{{/if}}</button>
+                                        </header>
+										<p>{{option.attributes.details}}</p>
+									</li>
+								{{/each}}
+							</ul>
+							<hr/>
+						{{/gt}}
+						
+						{{#gt activity.attributes.highlights.length 0}}
+							<div class="activity-important">
+								<h4 class="title-4rd">{{t 'activity.details.highlights'}}</h4>
+								<ul class="list-unstyled">
+									{{#each activity.attributes.highlights.models as |item|}}
+										<li><span class="icon"><i class="fa fa-star"></i></span><span class="item"> {{item.attributes.description}}</span></li>
+									{{/each}}
+								</ul>
+							</div>
+						{{/gt}}
+						
+						{{#gt activity.attributes.inclusions.length 0}}
+							<div class="activity-important">
+								<h4 class="title-4rd">{{t 'activity.details.includes'}}</h4>
+								<ul class="list-unstyled">
+									{{#each activity.attributes.inclusions.models as |item|}}
+										<li><span class="icon"><i class="fa fa-check-circle"></i></span><span class="item"> {{item.attributes.description}}</span></li>
+									{{/each}}
+								</ul>
+							</div>
+						{{/gt}}
+						
+						{{#gt activity.attributes.exclusions.length 0}}
+							<div class="activity-important">
+								<h4 class="title-4rd">{{t 'activity.details.excludes'}}</h4>
+								<ul class="list-unstyled">
+									{{#each activity.attributes.exclusions.models as |item|}}
+										<li><span class="icon"><i class="fa fa-times"></i></span><span class="item"> {{item.attributes.description}}</span></li>
+									{{/each}}
+								</ul>
+							</div>
+						{{/gt}}
+						
+						{{#gt activity.attributes.recommendations.length 0}}
+							<div class="activity-important">
+								<h4 class="title-4rd">{{t 'activity.details.recommendations'}}</h4>
+								<ul class="list-unstyled">
+									{{#each activity.attributes.recommendations.models as |item|}}
+										<li><span class="icon"><i class="fa fa-info-circle"></i></span><span class="item"> {{item.attributes.description}}</span></li>
+									{{/each}}
+								</ul>
+							</div>
+						{{/gt}}
+						
+						{{#gt activity.attributes.restrictions.length 0}}
+							<div class="activity-important">
+								<h4 class="title-4rd">{{t 'activity.details.restrictions'}}</h4>
+								<ul class="list-unstyled">
+									{{#each activity.attributes.restrictions.models as |item|}}
+										<li><span class="icon"><i class="fa fa-exclamation-triangle"></i></span><span class="item"> {{item.attributes.description}}</span></li>
+									{{/each}}
+								</ul>
+							</div>
+						{{/gt}}
+						<!--ActivityRaiting-->
+						{{#any ratingActivities}}
+							<div class="activity-important">
+								<div class="activity-important">
+									<h3 class="title-3rd">
+										{{t 'activity.details.opinions'}}
+									</h3>
+								</div>
+								<div class="activity-important">
+									<div class="row">
+										<div class="col-sm-9 col-md-9 pull-left" >
+												<div class="row">
+													<div class="col-sm-4">
+														<span class="rating">
+															<span class="star {{#is ratingAverange 5}}selected{{/is}}"></span>
+															<span class="star {{#is ratingAverange 4}}selected{{/is}}"></span>
+															<span class="star {{#is ratingAverange 3}}selected{{/is}}"></span>
+															<span class="star {{#is ratingAverange 2}}selected{{/is}}"></span>
+															<span class="star {{#is ratingAverange 1}}selected{{/is}}"></span>
+														</span>
+													</div>
+													<div class="col-sm-5 review-title">
+														<h4>{{t ratingAverange}} {{t 'activity.details.the-count-opinions' name=totalElemento}}</h4>
+													</div>
+												</div>
+										</div>
+									</div>
+								</div>
+								<div class="activity-important">
+									<div class="row">
+										{{{collectionOf 'ratingActivitiesView' ratingActivities}}}
+									</div>
+								</div>
+								<hr>
+								<div class="row">
+									<div class="text-center">
+										<button type="button" class="btn-primary btn btn-more-question" id="more-questions">{{t 'activity.details.more-question'}}</button>
+									</div>
+								</div>
+							</div>
+						{{/any}}
+						<!--ActivityRaiting End-->
+					</div>
+					</div>
+					<!-- /ActivityBody -->
+					
+				<div id="booking-form-container" class="col-sm-5 col-md-4 col-sm-pull-right col-md-pull-right col-lg-pull-right">
+					<!-- ActivityCheckoutBox -->
+					<div id="activity-checkout-box-container"></div>
+					<!-- /ActivityCheckoutBox -->
+					<hr/>
+					<!-- ActivityMap -->
+					{{#if staticMap}}
+						<div id="mapStatic" class="provider-resume-map">
+							<!--<div class="container">-->
+								<h3>
+									{{t 'activity.details.map'}}
+								</h3>
+							<!--</div>-->
+							
+							<div class="container mapClass" >
+								<img src="{{staticMap}}" />							
+							</div>
+						</div>
+						<hr/>
+					{{/if}}
+					<!-- / ActivityMap -->
+					<!-- ProviderResume -->
+					<div class="provider-resume labeled-box">
+						<p class="provider-resume-flag">{{t 'activity.details.certificate'}}</p>
+                        <div class="labeled-box-body">
+                            <!--<i class="provider-resume-icon"><img src="{{baseImageURL}}/icons/medal.png" /></i>-->
+    						<div class="provider-resume-header">
+    							<div class="provider-resume-image">
+    								<img src="{{activity.attributes.organization.image}}" alt="{{activity.attributes.organization.name}}">
+    							</div>
+    							<h3 class="provider-resume-name">
+    								{{activity.attributes.organization.name}}
+    							</h3>
+    <!-- 							<span class="provider-resume-rating">  -->
+    <!-- 								<span class="rating">  -->
+    <!-- 									<span class="star selected"></span><span class="star selected"></span><span class="star selected"></span><span class="star selected"></span><span class="star selected"></span> -->
+    <!-- 								</span>  -->
+    <!-- 							</span> -->
+    						</div>
+    						<!--<p class="provider-resume-body">{{activity.attributes.organization.description}}</p>-->
+                        </div>
+					</div>
+                    {{#any providerActivities}}
+                        <hr style="margin: 0;"/>
+                        <aside class="provider-other-activities labeled-box">
+                            <div class="labeled-box-body">
+                                <h5>{{t 'activity.details.other-activities-from' name=activity.attributes.organization.name}}</h5>
+                                <ul class="list-unstyled activity-collection activity-collection-grid">
+                                    {{{collectionOf 'otherActivityView' providerActivities}}}
+                                </ul>
+								<footer>
+                                    <a href="{{baseURL}}{{activitiesURL}}?organizationCode={{activity.attributes.organization.code}}" class="btn btn-primary btn-apply">{{t 'activity.details.see-more'}}</a>
+                                </footer>
+                            </div>
+                        </aside>
+                    {{/any}}
+					{{#if allowQuestion}}
+						<hr/>
+						<div class="alert alert-success hideContainerSuccessQuestion" id="questionSuccess">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="col-xs-1">
+										<i class="fa fa-check fa-2x"></i>
+									</div>
+									 <div class="col-xs-11 text-center">
+										 <p>{{t 'activity.details.question-message'}}</p>
+									 </div>
+								</div>
+							</div>
+						</div>
+						<div class="provider-resume-question">
+							<h3>
+								{{t 'activity.details.question'}}
+							</h3>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<p class="provider-resume-body">{{t 'activity.details.enter-email-question'}}</p>
+										<input id="email" data-checkout="email" class="form-control" placeholder="{{t 'activity.details.enter-email'}}" value="{{email}}"/>
+									</div>
+								</div>
+
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea name="details" id="details" rows="2" maxlength="10000" class="form-control" placeholder="{{t 'activity.details.enter-question'}}">{{{details}}}</textarea>
+									</div>
+								</div>
+								<div class="row">
+									<div class="text-center">
+										<button type="button" class="btn-primary btn btn-send" id="sendQuestion">{{t 'activity.details.send'}}</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					{{/if}}
+					<!-- /ProviderResume -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+    {{#any similarActivities}}
+        <footer class="similar-activities">
+            <section class="container">
+                <hr/>
+                <h5>{{t 'activity.details.similar'}}</h5>
+                <ul class="list-unstyled activity-collection activity-collection-grid">
+                    {{{collectionOf 'liteActivityView' similarActivities}}}
+                </ul>
+            </section>
+        </footer>
+    {{/any}}
+</section>

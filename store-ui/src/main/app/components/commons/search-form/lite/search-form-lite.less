@@ -1,0 +1,29 @@
+.search-form {
+  &.search-form-lite {
+    .break(xs, {
+      width: auto;
+    });
+    .break(sm, {
+      width: auto;
+    });
+
+    button {
+      color: @grey-4;
+      background-color: @grey-10;
+
+      .break(sm, {
+        width: auto;
+      });
+
+      line-height: 1.8;
+      .break(sm, {
+        line-height: 1.6;
+      });
+
+      i {
+        padding-right: 0;
+        line-height: 1.4;
+      }
+    }
+  }
+}

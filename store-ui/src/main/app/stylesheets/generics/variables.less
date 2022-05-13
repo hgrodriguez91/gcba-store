@@ -1,0 +1,275 @@
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+// Number of columns in the grid.
+//@grid-columns:              12;
+// Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width:         20px;
+// Navbar collapse
+// Point at which the navbar becomes uncollapsed.
+//@grid-float-breakpoint:     @screen-sm-min;
+// Point at which the navbar begins collapsing.
+//@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+/*Bootstrap breakpoints override*/
+@container-desktop: 860px;
+@container-large-desktop: 1050px;
+
+//Support for extra large devices ( > 1600px width )
+@screen-xl: 1600px;
+@screen-xl-min: @screen-xl;
+@screen-xl-desktop: @screen-xl-min;
+@container-xl-desktop: 1550px + @grid-gutter-width;
+@container-xl-desktop: 1250px;
+@container-xl: @container-xl-desktop;
+@screen-lg-max: @screen-xl-min - 1;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+@font-family-book: 'gotham_bookregular';
+@font-family-medium: 'gotham_mediumregular';
+@font-family-bold: 'gotham_boldregular';
+
+@font-family-raleway-bold: 'raleway_bold';
+@font-family-raleway-extrabold: 'raleway_extrabold';
+@font-family-raleway-regular: 'raleway_regular';
+@font-family-raleway-semibold: 'raleway_semibold';
+@font-family-vollkorn-bold: 'vollkorn_bold';
+
+@font-filename-book: 'gotham-book-webfont';
+@font-filename-medium: 'gotham-medium-webfont';
+@font-filename-bold: 'gotham-bold-webfont';
+
+@font-filename-raleway-bold: 'raleway-bold';
+@font-filename-raleway-extrabold: 'raleway-extrabold';
+@font-filename-raleway-regular: 'raleway-regular';
+@font-filename-raleway-semibold: 'raleway-semibold';
+@font-filename-vollkorn-bold: 'vollkorn-bold';
+
+@font-family-sans-serif:  @font-family-book;
+
+@font-size-base: 13px;
+@font-size-large: 16px;
+@font-size-input: 15px;
+
+@font-size-h1: 24px;
+@font-size-h2: 18px;
+@font-size-h2-sm: 22px;
+/*@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
+@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px*/
+
+@font-family-h1: @font-family-bold;
+@font-family-h2: @font-family-medium;
+@font-family-h3: @font-family-medium;
+@font-family-h4: @font-family-medium;
+@font-family-h5: @font-family-medium;
+@font-family-h6: @font-family-medium;
+
+
+
+
+// Unit-less `line-height` for use in components like buttons.
+//@line-height-base:        1.428571429; // 20/14
+// Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+//@line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
+
+// By default, this inherits from the `<body>`.
+//@headings-font-family:    inherit;
+//@headings-font-weight:    500;
+//@headings-line-height:    1.1;
+//@headings-color:          inherit;
+
+@blue-zelzet: #3b475e;
+@red-zelzet: #dc493d;
+@red-2-zelzet: #ff6f57;
+@red-cellophane: ~'hsla(0, 100%, 45%, 0.5)';
+@blue-facebook: #3d5b9c;
+@blue-2: #3c485e;
+@blue-3: #4f596c;
+@blue-4: #0a6def;
+@blue-5: #3f8eb6;
+@light-blue: #c3e8f7;
+@green-zelzet: #01c8b0;
+@green-2-zelzet: #00ce96;
+
+@white: #FFFFFF;
+@black: #000000;
+
+@grey-1: #87898b;
+@grey-2: #333333;
+@grey-3: #8f8f8f;
+@grey-4: #959595;
+@grey-5: #5c5c5c;
+@grey-6: #f4f4f4;
+@grey-7: #858585;
+@grey-8: #f1f1f1;
+@grey-9: #bbbbbb;
+@grey-10: #ebebeb;
+@grey-11: #f8f8f8;
+
+@shadow-black: #1d1d1b;
+
+@grey-link: @grey-1;
+@footer-bg: @grey-2;
+@footer-title-color: @grey-3;
+@footer-border-color: @footer-title-color;
+@footer-link-color: @grey-4;
+@form-label-color: @grey-5;
+@modal-title-color: @grey-5;
+
+/* BG BOXES */
+@bg-box-red-bg: @red-zelzet;
+@bg-box-grey-bg: @grey-8;
+@bg-box-light-grey-bg: @grey-6;
+@bg-box-lighter-grey-bg: @grey-11;
+@bg-box-lighter-white-bg: @white;
+@bg-box-blue-bg: @blue-2;
+@bg-box-black-bg: @black;
+@bg-box-light-blue-bg: @light-blue;
+@bg-box-triangles-width: 12;
+@bg-box-triangles-height: 6;
+@bg-box-triangles-width-md: 22;
+@bg-box-triangles-height-md: 11;
+
+@serrated-border-size: 25px;
+
+// List
+@item-description-color: @grey-7;
+@item-standard-price-color: @grey-7;
+
+// Basics of a navbar
+@navbar-height:                    65px;
+@navbar-height-sm:                    75px;
+@navbar-height-lg:                    75px;
+@navbar-height-img:                    40px;
+@navbar-height-sm-img:                    50px;
+@navbar-height-lg-img:                    50px;
+@navbar-margin-bottom:             0;
+@navbar-border-radius:             0;
+@navbar-padding-horizontal:        0;
+@navbar-padding-vertical:          18px;
+//@navbar-collapse-max-height:       340px;
+
+@navbar-default-color:             @blue-zelzet;
+@navbar-default-bg:                #ffffff;
+@navbar-default-border:            transparent;
+
+// Navbar links
+@navbar-default-link-color:                @grey-link;
+@navbar-default-link-hover-color:          darken(@grey-link, 10%);
+//@navbar-default-link-hover-bg:             transparent;
+//@navbar-default-link-active-color:         #555;
+//@navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
+//@navbar-default-link-disabled-color:       #ccc;
+//@navbar-default-link-disabled-bg:          transparent;
+
+// Navbar brand label
+@navbar-default-brand-color:               @navbar-default-link-color;
+@navbar-default-brand-hover-color:         darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-hover-bg:            transparent;
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:           transparent;
+@navbar-default-toggle-icon-bar-bg:        @blue-zelzet;
+@navbar-default-toggle-border-color:       transparent;
+
+// Buttons
+@btn-facebook-color:              #fff;
+@btn-facebook-bg:                 @blue-facebook;
+@btn-facebook-border:             darken(@blue-facebook, 5%);
+
+@btn-zelzet-1-color:              @red-zelzet;
+@btn-zelzet-1-bg:                 #fff;
+@btn-zelzet-1-border:             @red-zelzet;
+
+@btn-zelzet-2-color:              #FFFFFF;
+@btn-zelzet-2-bg:                 transparent;
+@btn-zelzet-2-border:             #FFFFFF;
+
+@btn-zelzet-3-color:              @red-zelzet;
+@btn-zelzet-3-bg:                 #fff;
+@btn-zelzet-3-border:             @red-zelzet;
+
+//== Modals
+//
+//##
+
+//** Padding applied to the modal body
+@modal-inner-padding:       40px;
+
+//** Padding applied to the modal title
+@modal-title-padding:         @modal-inner-padding;
+//** Modal title line-height
+//@modal-title-line-height:     @line-height-base;
+
+//** Background color of modal content area
+//@modal-content-bg:                             #fff;
+//** Modal content border color
+//@modal-content-border-color:                   rgba(0,0,0,.2);
+//** Modal content border color **for IE8**
+//@modal-content-fallback-border-color:          #999;
+
+//** Modal backdrop background color
+//@modal-backdrop-bg:           #000;
+//** Modal backdrop opacity
+@modal-backdrop-opacity:      .75;
+//** Modal header border color
+//@modal-header-border-color:   #e5e5e5;
+//** Modal footer border color
+@modal-footer-bg: @grey-6;
+@modal-footer-color: @grey-5;
+
+@modal-md:                    450px;
+
+@border-radius-base:        0;
+@border-radius-large:       0;
+@border-radius-small:       0;
+
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 10);
+@form-group-margin-bottom: 20px;
+
+@link-color: @red-zelzet;
+@brand-primary: @black;
+@padding-large-vertical: 13px;
+@padding-large-horizontal:  35px;
+@line-height-large: 1.4;
+
+/* Activities list grid */
+@activities-list-grid-columns-xxs: 1;
+@activities-list-grid-columns-xs: 2;
+@activities-list-grid-columns-sm: 2;
+@activities-list-grid-columns-md: 4;
+@activities-list-grid-columns-xl: 4;
+
+@activities-grid-border-spacing: 7px;
+@activities-grid-border-spacing-xs: 3px;
+@activities-list-grid-height-xxs: 360px;
+@activities-list-grid-height-xs: 300px;
+@activities-list-grid-height-sm: 350px;
+@activities-list-grid-height-md: 260px;
+@activities-list-grid-height-lg: 346px;
+@activities-list-grid-height-xl: 300px;
+
+/* Activities list recommended*/
+@activities-recommended-list-grid-height-md: 500px;
+@activities-recommended-list-grid-height-lg: 550px;
+@activities-recommended-list-height-xl: 610px;
+/*Activities list items*/
+@activities-list-item-height-xs: 190px;
+@activities-list-item-height-md: 230px;
+@activities-list-item-height-lg: 280px;
+@activities-list-item-media-width-xs: 200px;
+@activities-list-item-media-width-md: 260px;
+@activities-list-item-media-width-lg: 280px;
+
+@activities-list-page-size-width: 60px;
+
+@footer-serrated-border-top-color: white;
+
+/*Activity details*/
+@activity-header-side-brand-width: 170px;

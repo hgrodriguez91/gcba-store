@@ -1,0 +1,32 @@
+<li>
+	<div class="question">
+		<div class="media">
+			<div class="media-left">
+				<i class="ico-question"></i>
+			</div>
+			<div class="media-body">
+				<p>{{question.text}}</p>
+				{{#any question.responses}}
+					<div class="question-answers-list">
+						<ul class="list-unstyled">
+							{{#each question.responses as |responses|}}
+								<li>
+									<div class="answer">
+										<div class="media">
+											<div class="media-left">
+												<i class="ico-answer"></i>
+											</div>
+											<div class="media-body">
+												<p>{{text}}</p>
+											</div>
+										</div>
+									</div>
+								</li>
+							{{/each}}
+						</ul>
+					</div>
+				{{/any}}
+			</div>
+		</div>
+	</div>
+</li>

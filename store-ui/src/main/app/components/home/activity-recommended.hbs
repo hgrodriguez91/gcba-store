@@ -1,0 +1,41 @@
+<li>
+    <a class="activity-collection-item-recommended activity-collection-item-normal" href="{{baseURL}}{{activityURL}}/{{item.code}}">
+        <div class="item-media-wrapper">
+            <div>
+                {{#if item.old_price}}
+	                <i class="icon icon-ribbon"></i>
+                {{/if}}
+                <img src="{{item.image}}" alt="{{item.title}}">
+                <div class="item-info">
+                <div class="item-title"><h4>{{item.title}}</h4></div>
+
+            </div>
+            </div>
+            
+        </div>
+        <div class="item-body-recommended">
+            <div class="item-description">
+                {{#if item.rating_average }}
+                    <div class="item-pricing">
+                        <span class="rating activity-price item-price" style="text-align: left; font-size: 1.6em;">
+                            <span class="star {{#is item.rating_average 5}}selected{{/is}}"></span>
+                            <span class="star {{#is item.rating_average 4}}selected{{/is}}"></span>
+                            <span class="star {{#is item.rating_average 3}}selected{{/is}}"></span>
+                            <span class="star {{#is item.rating_average 2}}selected{{/is}}"></span>
+                            <span class="star {{#is item.rating_average 1}}selected{{/is}}"></span>
+                        </span>
+                    </div>
+                {{/if}}
+                <div class="item-pricing">
+                    {{discountPrice item.old_price}}
+                    {{activityPrice item.price maximumFractionDigits="0"}}
+                </div>
+            </div>
+            <div class="item-footer">
+                <div class="description-limit">
+                    <h6>{{item.description}}</h6>
+                </div>
+            </div>
+        </div>
+    </a>
+</li>

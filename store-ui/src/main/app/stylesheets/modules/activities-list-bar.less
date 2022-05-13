@@ -1,0 +1,138 @@
+.activities-list-bar {
+  text-align: left;
+  position: static;
+
+  .break(xxs only, {
+    height: 30px;
+  });
+
+  .break(xs only, {
+    text-align: center;
+    padding-right: 70px;
+    padding-left: 70px;
+  });
+
+  .break(sm, {
+    position: relative;
+    text-align: center;
+    height: 40px;
+  });
+
+  .total-counter {
+    font-size: 1.1em;
+    color: #000;
+    margin-top: 40px;
+    text-align: center;
+    .font-bold-raleway;
+    .break(sm, {
+      margin: 0;
+      line-height: 2.8em;
+      text-align: left;
+    });
+
+    .break(md, {
+      line-height: 2.5em;
+      font-size: 1.3em;
+    });
+
+    .highlight {
+      font-family: inherit;
+      color: #000;
+      .font-bold-raleway;
+    }
+  }
+
+  .nav-params {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .break(sm, {
+      text-align: right;
+    });
+
+    &>li {
+      display: inline-block;
+
+      &.active {
+        color: @red-zelzet;
+      }
+
+      &>a {
+        color: inherit;
+        padding: 2px;
+
+        &:focus, &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+
+    .list-type {
+      color: @grey-7;
+      font-size: 15px;
+        cursor: pointer;
+      .break(md, {
+        font-size: 18px;
+      })
+    }
+
+    .list-sort {
+      color: @grey-5;
+      .font-bold-raleway;
+      font-size: 12px;
+
+      .highlight {
+        font-family: inherit;
+        font-weight: bold;
+      }
+    }
+
+    .list-size {
+      display: none;
+      color: @grey-5;
+      .font-bold-raleway;
+      font-size: 1.1em;
+      width: @activities-list-page-size-width;
+      text-align: right;
+      position: absolute;
+      top: 6px;
+      right: 10px;
+
+      .break(sm, {
+        position: relative;
+        top: 0;
+        right: 0;
+      });
+
+      .highlight {
+        font-family: inherit;
+        font-weight: bold;
+      }
+
+      .btn {
+        line-height: 1.4;
+        font-size: 1em;
+        padding: 5px 9px;
+        border-color: @grey-10;
+
+        .glyphicon {
+          padding-right: 8px;
+        }
+      }
+
+      ul {
+        width: @activities-list-page-size-width;
+        min-width: 0;
+
+        li {
+          a {
+            padding-right: 11px;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,181 @@
+.booking-details {
+  body {
+    background-color: @bg-box-lighter-white-bg;
+    .footer {
+      &.booking-details-footer {
+/*         .footer-serrated-border(@bg-box-grey-bg); */
+        //.border-top-gradient(@bg-box-lighter-grey-bg);
+      }
+    }
+  }
+}
+
+.video-responsive {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  position: relative;
+  }
+.video-responsive iframe, .video-responsive object, .video-responsive embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  }
+
+
+.dropdown {
+  position: relative;
+  width: 100%;
+  .dropdown-input {
+    text-overflow: ellipsis; 
+    background: #FFFFFF;
+    .font-regular-raleway;
+    font-size: 11.95pt;
+    text-transform: none;
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  width: 100%;
+  .font-regular-raleway;
+  font-size: 11.95pt;
+  text-transform: none;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.noFocus .text:focus{
+  outline:0px;
+}
+.input-group-rate {
+  width: 48%;
+}
+.input-left {
+  margin-left: -15px;
+}
+.form-control-dropdown {
+  font-size: 15px;
+  text-align: center;
+  padding:2px;
+  border: 0;
+  box-shadow: none;
+  width: 50px;
+  .break(sm, {
+    font-size: 15px;
+    text-align: center;
+    border: 0 solid #fff;
+    box-shadow: none;
+  });
+
+  &:focus {
+    border-color: #fff;
+    outline: 0;
+  }
+
+  &.error {
+    border-color: @red-zelzet;
+    box-shadow: 0 0 2px 1px @red-zelzet;
+    z-index: 5;
+  }
+}
+.text-right-dropdown {
+  margin-top: 10px;
+}
+.hideContainer {
+  display: none;
+}
+
+.input-date {
+    .font-regular-raleway;
+    font-size: 11.95pt;
+    text-transform: none;
+}
+
+.datepicker {
+  padding: .2em .2em 0; 
+  color: rgb(12, 12, 12);
+  text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  background-color: #FFFFFF;
+  border: 1px solid darken(#FFFFFF, 10%);
+  
+  table {
+    width: 100%;
+
+    tr {
+      th {
+        &:hover {
+          background-color: @red-zelzet;
+        }
+        &.dow {
+          &:hover {
+            background-color: inherit;
+          }
+        }
+      }
+      td {
+        &:hover {
+          background-color: @red-zelzet;
+        }
+        &.disabled {
+          background: none;
+          color: #bbbbbb;
+          cursor: default;
+        }
+        &.disabled:hover {
+          background: none;
+          color: #bbbbbb;
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1600px) and (max-width: 1900px){
+  .datepicker {
+    width: 28.2em; 
+  }
+}
+@media (min-width: 1201px) and (max-width: 1599px){
+  .datepicker {
+    width: 23.1em; 
+  }
+}
+@media (min-width: 1001px) and (max-width: 1200px){
+  .datepicker {
+    width: 18.2em; 
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1000px){
+  .datepicker {
+    width: 19.8em; 
+  }
+}
+@media (max-width: 767px){
+  .datepicker {
+    width: 24em; 
+  }
+}

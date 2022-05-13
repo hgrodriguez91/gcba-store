@@ -1,0 +1,25 @@
+<ul class="pagination">
+    <li class="prev next-prev disabled">
+        <a href="{{previous.url}}" aria-label="{{t 'pagination.previous'}}">
+            <span class="hidden-xs">{{t 'pagination.previous'}}</span>
+            <span class="visible-xs"><i class="fa fa-backward"></i></span>
+        </a>
+    </li>
+    {{#if ellipsis.left}}
+        <li>...</li>
+    {{/if}}
+    {{#each pages}}
+        <li {{#if active}}class="active"{{/if}}>
+            <a href="{{url}}">{{text}}</a>
+        </li>
+    {{/each}}
+    {{#if ellipsis.right}}
+        <li>...</li>
+    {{/if}}
+    <li class="next next-prev disabled">
+        <a href="{{next.url}}" aria-label="{{t 'pagination.next'}}">
+            <span class="hidden-xs">{{t 'pagination.next'}}</span>
+            <span class="visible-xs"><i class="fa fa-forward"></i></span>
+        </a>
+    </li>
+</ul>

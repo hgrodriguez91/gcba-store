@@ -1,0 +1,9 @@
+<div class="form-group has-feedback">
+	<select id="booking-time-selector" required name="booking-time-selector" class="form-control select2-control input-date" placeholder="{{t 'activity.checkout.choose-time'}}">
+		<option value="">{{#if isPhone}}{{t 'activity.checkout.choose-time'}}{{/if}}</option>
+		{{#each times.models}}
+			<option value="{{attributes.hour}}_{{attributes.minutes}}_{{attributes.periodDay}}" {{#lte attributes.capacity 0}}disabled="disabled"{{/lte}}>{{time this}} - {{t 'activity.checkout.available-quota' count=attributes.capacity}}</option>
+		{{/each}}
+	</select>
+<!-- 	<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none;"></span> -->
+</div>

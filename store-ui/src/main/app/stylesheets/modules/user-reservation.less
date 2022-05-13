@@ -1,0 +1,139 @@
+.user-reservation {
+  padding-bottom: @grid-gutter-width;
+  font-size: 12px;
+  margin-left: (@grid-gutter-width * -.75);
+  margin-right: (@grid-gutter-width * -.75);
+  padding-left: (@grid-gutter-width * .75);
+  padding-right: (@grid-gutter-width * .75);
+  overflow: hidden;
+
+  .break(sm, {
+    font-size: 13px;
+    margin-left: (@grid-gutter-width * -1);
+    margin-right: (@grid-gutter-width * -1);
+    padding-left: @grid-gutter-width;
+    padding-right: @grid-gutter-width;
+  });
+
+  .break(md, {
+    padding-top: @grid-gutter-width;
+    font-size: 14px;
+  });
+
+  &:hover {
+    background-color: #ecf3f6;
+  }
+
+  & + .user-reservation {
+    border-top: #efefef solid 1px;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .user-reservation-heading {
+    padding: (@grid-gutter-width * .75) 0 (@grid-gutter-width / 2) 0;
+    font-size: 14px;
+
+    .break(sm, {
+      font-size: 16px;
+    });
+
+    .break(md, {
+      float: right;
+      width: 340px;
+      padding-top: 0;
+      padding-bottom: 5px;
+      font-size: 18px;
+    });
+
+    .h3 {
+      font-size: inherit;
+      line-height: 1.3;
+      margin: 0;
+      color: @blue-2;
+      .font-medium;
+
+      a {}
+    }
+  }
+
+  .user-reservation-image {
+    margin-bottom: (@grid-gutter-width / 2);
+    margin-left: (@grid-gutter-width * -.75);
+    margin-right: (@grid-gutter-width * -.75);
+
+    .break(sm, {
+      margin-left: (@grid-gutter-width * -1);
+      margin-right: (@grid-gutter-width * -1);
+    });
+
+    .break(md, {
+      float: left;
+      width: 230px;
+      margin-left: 0;
+      margin-right: 0;
+    });
+
+    a {
+      display: block;
+      height: 150px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+
+  .user-reservation-body {
+    color: #5c5c5c;
+    padding-bottom: (@grid-gutter-width / 2);
+
+    .break(md, {
+      float: right;
+      width: 340px;
+    });
+
+    .personal-information {
+      margin-bottom: (@grid-gutter-width / 2);
+      line-height: 1.8;
+
+      .icon {
+        color: #888e99;
+        display: inline-block;
+        width: 20px;
+        text-align: center;
+      }
+    }
+
+    .billing-information {
+      border: @blue-2 solid 2px;
+      overflow: hidden;
+      .font-medium;
+      text-transform: uppercase;
+      font-size: 12px;
+
+      .break(md, {
+        float: right;
+        width: 340px;
+        line-height: 22px;
+      });
+
+      .row {
+        padding: (@grid-gutter-width / 2) (@grid-gutter-width / 2);
+
+        & + .row {
+          border-top: #9da3ae solid 1px;
+        }
+      }
+
+      .price {
+        text-align: right;
+
+        .break(md, {
+          font-size: 16px;
+        });
+      }
+    }
+  }
+}

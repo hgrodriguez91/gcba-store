@@ -1,0 +1,22 @@
+.details-page {
+  body {
+    background-color: @bg-box-lighter-white-bg;
+
+    .activity-detail {
+      > div {
+        padding-top: 30px;
+
+        @import "provider-other-activities";
+      }
+    }
+    @import "similar-activities";
+    @import "AvailabilityModal/availability-modal";
+  }
+
+  .footer {
+    &.details-footer {
+/*       .footer-serrated-border(@bg-box-lighter-grey-bg); */
+      //.border-top-gradient(@bg-box-lighter-grey-bg);
+    }
+  }
+}

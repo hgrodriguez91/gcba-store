@@ -1,0 +1,140 @@
+.publish-page {
+  .slide-header {
+    height: 280px;
+    color: #FFFFFF;
+
+    .break(md, {
+      text-align: center;
+      height: 400px;
+    });
+
+    h1 {
+      font-size: 45px;
+
+      .break(md, {
+        font-size: 71px;
+      });
+    }
+
+    p {
+      font-size: 20px;
+
+      .break(md, {
+        font-size: 30px;
+      });
+    }
+
+    .container {
+      padding-top: 80px;
+
+      .break(sm, {
+        padding-top: 100px;
+      });
+
+      .break(md, {
+        padding-top: 140px;
+      });
+    }
+  }
+
+  .reasons {
+    .break(md, {
+      margin-bottom: (@grid-gutter-width * 3);
+    });
+
+    .title {
+      .break(sm, {
+        text-align: left;
+      });
+
+    }
+
+    li {
+      margin-left: (@grid-gutter-width * -1);
+      margin-right: (@grid-gutter-width * -1);
+      padding: 0 @grid-gutter-width @grid-gutter-width;
+
+      .break(sm, {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        display: table;
+        width: 100%;
+      });
+
+      &+li {
+        border-top: #ebebeb solid 1px;
+        padding-top: (@grid-gutter-width * .75);
+
+        .break(md, {
+          padding-top: (@grid-gutter-width * 1.5);
+        });
+      }
+
+      .check {
+        color: #01c8b0;
+        font-size: 15px;
+        display: block;
+
+        .break(sm, {
+          display: table-cell;
+          padding-right: (@grid-gutter-width * .75);
+        });
+
+        .break(md, {
+          font-size: 20px;
+        });
+      }
+
+      .reason {
+        display: block;
+
+        .break(sm, {
+          display: table-cell;
+          width: 1000px;
+          text-align: left;
+        });
+      }
+    }
+  }
+
+  .how-work {
+    padding-top: @grid-gutter-width;
+
+    .break(md, {
+      padding-top: (@grid-gutter-width * 2);
+    });
+
+    .list-numbered {
+      .break(md, {
+        padding: @grid-gutter-width 0;
+      });
+
+      li {
+        .break(md, {
+          margin-bottom: (@grid-gutter-width * 1.5);
+        });
+      }
+    }
+
+    .our-socials {
+      margin-left: (@grid-gutter-width * -1);
+      margin-right: (@grid-gutter-width * -1);
+      margin-top: @grid-gutter-width;
+      padding: (@grid-gutter-width / 2) @grid-gutter-width 0;
+      border-top: #dcdcdc solid 1px;
+
+      .break(sm, {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+      });
+
+      .break(md, {
+        padding-top: (@grid-gutter-width * 2);
+      });
+    }
+  }
+}

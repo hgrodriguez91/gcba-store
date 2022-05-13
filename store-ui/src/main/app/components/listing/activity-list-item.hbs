@@ -1,0 +1,87 @@
+<li title="{{item.category.name}} | {{item.location.name}} | {{item.title}}">
+    <a class="activity-collection-item activity-collection-item-list bg-box-white" href="{{baseURL}}{{activityURL}}/{{item.code}}">
+        <div class="item-media-wrapper">
+            <div>
+                {{#if item.old_price}}
+                	<i class="icon icon-ribbon"></i>
+                {{/if}}
+                <img src="{{item.photo}}" alt="{{item.title}}">
+            </div>
+        </div>
+        <div class="item-body">
+            <div class="item-info">
+                <!--<button data-item-id="{{item.code}}" class="btn btn-favorite"><i class="fa {{#if item.favorite}}fa-heart{{else}}fa-heart-o{{/if}}"></i></button>-->
+                <div class="item-title dot-ellipsis">
+                    <h4>{{item.title}}</h4>
+                </div>
+                <div class="item-category dot-ellipsis">
+                    {{#if item.is_new}}
+                        <span class="new-item-label"><i class="fa fa-star"></i>{{t 'NEW' context='female'}}</span>
+                    {{/if}}
+                    <!--{{item.category.name}}-->
+                    <i class="glyphicon glyphicon-map-marker"></i> <span class="item-place">{{item.location.name}}</span>
+                </div>
+                <div class="item-description dot-ellipsis">
+                    <p>{{item.description}}</p>
+                </div>
+                <div class="row stars-block">
+                    <div class="col-md-12">
+                        {{#if item.rating_average }}
+                        <div class="col-md-4" style="margin-left: -10px;">
+                            <span class="rating">
+                                <span class="star {{#is item.rating_average 5}}selected{{/is}}"></span>
+                                <span class="star {{#is item.rating_average 4}}selected{{/is}}"></span>
+                                <span class="star {{#is item.rating_average 3}}selected{{/is}}"></span>
+                                <span class="star {{#is item.rating_average 2}}selected{{/is}}"></span>
+                                <span class="star {{#is item.rating_average 1}}selected{{/is}}"></span>
+                            </span>
+                        </div>
+                        {{/if}}
+                        <div class="col-md-6" style="margin-left: -8px;">
+                             {{#activityShowBookingPercentage item.payment_percentage_online}}
+                                <div class="item-booking-percentage">
+                                    <p class="booking-percentage-legend">{{t 'listing.online-booking-payment' percentage=item.payment_percentage_online }}</p>
+                                </div>
+                            {{/activityShowBookingPercentage}}
+                        </div>
+                    </div>
+                </div>
+                
+                    {{#or item.widget item.bookings_quantity}}
+                    <div class="row">
+                        <div class="col-md-12">
+                            {{#if item.bookings_quantity}}
+                            <div class="col-md-9" style="margin-left: -10px;">
+                                <span class="bookings-quantity">
+                                    <span class="full" title="{{t 'listing.bookings-last-days' count=8 last=15}}"><i class="glyphicon glyphicon-ok-circle" style="margin-right: 4px;"></i>{{t 'listing.bookings-last-days' count=item.bookings_quantity last=15}}</span>
+                                    <!--<span class="synthesized" title="{{t 'listing.bookings-last-days' count=8 last=15}}"><i class="glyphicon glyphicon-ok-circle"></i>{{item.bookings_quantity}}</span>-->
+                                </span>
+                            </div>
+                            {{/if}}
+                            <!--{{#if item.widget}}
+                                <aside class="activities-item-tripadvisor">
+                                    <iframe class="tripadvisor-widget" scrolling="no" frameborder="0" src="{{baseURL}}{{../activityURL}}/{{item.static_code}}/tripadvisor-thumbs-up"></iframe>
+                                </aside>
+                            {{/if}}-->
+                        </div>
+                    </div>
+                    {{/or}}
+                </div>
+            <footer class="item-footer">
+                <div class="item-owner" title="{{item.owner_name}}">
+                    <i class="item-owner-medal"></i>{{item.owner_name}}
+                </div>
+                <!--<div style="padding-left: 60%;">
+                    <img src="{{baseImageURL}}/icons/carito-black.png" alt="" style="height: 35px;"/>
+                </div>-->
+                <div class="item-pricing" style="text-align: center;">
+                    {{#if item.price.amount}}
+                        <b>{{t 'price.from'}}</b>
+                    {{/if}}
+                    {{discountPrice item.old_price}}
+                    {{activityPrice item.price maximumFractionDigits="0"}}
+                </div>
+            </footer>
+        </div>
+    </a>
+</li>

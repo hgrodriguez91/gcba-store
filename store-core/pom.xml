@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.zelzet.gcba-store</groupId>
+		<artifactId>gcba-store</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>gcba-store-core</artifactId>
+	<packaging>jar</packaging>
+	<description>Store - Core</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.zelzet.api-gateway</groupId>
+			<artifactId>api-gateway-client</artifactId>
+			<version>${api.gateway.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.zelzet.commons-data</groupId>
+					<artifactId>commons-data-dto</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.zelzet.commons-data</groupId>
+					<artifactId>commons-data-type</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.zelzet.commons-data</groupId>
+			<artifactId>commons-data-dto</artifactId>
+			<version>${zz.commons.data.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.zelzet.commons-data</groupId>
+			<artifactId>commons-data-type</artifactId>
+			<version>${zz.commons.data.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.zelzet.commons-core</groupId>
+			<artifactId>commons-core-encryption</artifactId>
+			<version>${zz.commons.core.version}</version>
+		</dependency>
+	</dependencies>
+
+</project>

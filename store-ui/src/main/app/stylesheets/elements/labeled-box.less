@@ -1,0 +1,39 @@
+.labeled-box {
+  .bg-box;
+  .bg-box-blue;
+  padding: 13px 10px;
+  color: #fff;
+  position: relative;
+  font-size: 15px;
+  margin-bottom: 20px;
+
+  .break(sm, {
+    padding: 13px;
+  });
+
+  .labeled-box-flag {
+    position: absolute;
+    .ico-recommended-label;
+    top: 30px;
+    left: -10px;
+    line-height: 21px;
+    text-indent: 32px;
+    font-size: 0.9em;
+    text-align: left;
+    .font-medium;
+
+    .labeled-box-flag-icon {
+      position: absolute;
+      top: 5px;
+      left: -12px;
+    }
+  }
+
+  .labeled-box-body {
+    border: #ffffff solid 2px;
+
+    .break(sm, {
+      border: #ffffff solid 3px;
+    });
+  }
+}

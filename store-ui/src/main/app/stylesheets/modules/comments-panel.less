@@ -1,0 +1,47 @@
+.comments-panel {
+
+  &.panel {
+    .panel-body {
+      padding: 0;
+    }
+  }
+
+  .comment {
+    padding: (@grid-gutter-width * .75) @grid-gutter-width;
+    border-top: #dedede solid 1px;
+    margin-bottom: 0;
+
+    .break(sm, {
+      padding-top: @grid-gutter-width;
+      padding-bottom: @grid-gutter-width;
+    });
+
+    .break(md, {
+      padding-bottom: (@grid-gutter-width * 2);
+    });
+
+    .media-body {
+      border: #c8c8c8 solid 1px;
+
+      &:before {
+        border-top-color: #c8c8c8;
+      }
+    }
+
+    &.unread {
+      background-color: #ecf3f6;
+
+      .media-body {
+        border-color: #FFFFFF;
+
+        &:before {
+          border-top: #FFFFFF 11px solid;
+        }
+
+        &:after {
+          border-top: #FFFFFF 11px solid;
+        }
+      }
+    }
+  }
+}

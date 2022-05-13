@@ -1,0 +1,67 @@
+<div class="form-group">
+	<label for="email" class="control-label">{{t 'payment.personal-information.email.label'}}</label>
+	<input id="email" data-checkout="email" class="form-control" placeholder="{{t 'payment.personal-information.email.placeholder'}}" value="{{email}}"/>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="form-group">
+			<label for="fistName" class="control-label">{{t 'payment.personal-information.name.label'}}</label>
+			<input id="firstName" data-checkout="firstName" class="form-control" placeholder="{{t 'payment.personal-information.name.placeholder'}}" value="{{firstName}}"/>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="form-group">
+			<label for="lastName" class="control-label">{{t 'payment.personal-information.lastname.label'}}</label>
+			<input id="lastName" data-checkout="lastName" class="form-control" placeholder="{{t 'payment.personal-information.lastname.placeholder'}}" value="{{lastName}}"/>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="form-group">
+			<label for="residenceCountry" class="control-label">{{t 'payment.personal-information.country.label'}}</label>
+	    	<select id="residenceCountry" data-checkout="residenceCountry" class="form-control select2-control select-expiration">
+	    		<option value=""></option>
+				{{#select residenceCountry}}
+                    {{#each countries as |country|}}
+    	    			{{#with country}}
+    						<option value="{{country.code}}">{{country.name}}</option>
+    	    			{{/with}}
+    	    		{{/each}}
+				{{/select}}
+	    	</select>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="form-group">
+			<label for="residenceState" class="control-label">{{t 'payment.personal-information.state.label'}}</label>
+	    	<select id="residenceState" data-checkout="residenceState" class="form-control select2-control select-expiration">
+	    		<option value=""></option>
+	    		{{#select residenceState}}
+					{{#each states as |state|}}
+		    			{{#with state}}
+							<option value="{{state.code}}">{{state.name}}</option>
+		    			{{/with}}
+		    		{{/each}}
+	    		{{/select}}
+	    	</select>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<div class="form-group">
+			<label for="gender" class="control-label">{{t 'payment.personal-information.gender.label'}}</label>
+	    	<select id="gender" data-checkout="gender" class="form-control select2-control select-expiration">
+	    		{{#select gender}}
+					{{#each genders as |gender|}}
+		    			{{#with gender}}
+							<option value="{{gender.code}}">{{t gender.code}}</option>
+		    			{{/with}}
+		    		{{/each}}
+	    		{{/select}}
+	    	</select>
+		</div>
+	</div>	
+</div>
+

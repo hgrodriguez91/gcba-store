@@ -1,0 +1,30 @@
+.questions-panel {
+
+  &.panel {
+    .panel-body {
+      padding: 0;
+    }
+  }
+
+  .question {
+    padding: @grid-gutter-width;
+    border-top: #dedede solid 1px;
+    margin-bottom: 0;
+    .font-book;
+    font-size: 12px;
+    line-height: 1.4;
+
+    .break(sm, {
+      font-size: 13px;
+      line-height: inherit;
+    });
+
+    .break(md, {
+      font-size: 14px;
+    });
+
+    &.unread {
+      background-color: #ecf3f6;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+	
+	<changeSet id="initial-changeset" author="Luciano Rey" context="dev">
+		<comment>Creating the initial structure and data of the database</comment>
+		<sqlFile path="sql/db-structure.sql" relativeToChangelogFile="true" splitStatements="false" stripComments="false" />
+		<sqlFile path="sql/db-data-dev.sql" relativeToChangelogFile="true" splitStatements="false" stripComments="false" />
+	</changeSet>
+
+	<changeSet id="initial-changeset" author="Luciano Rey" context="jenkins">
+		<comment>Creating the initial structure and data of the database</comment>
+		<sqlFile path="sql/db-structure.sql" relativeToChangelogFile="true" splitStatements="false" stripComments="false" />
+		<sqlFile path="sql/db-data-jenkins.sql" relativeToChangelogFile="true" splitStatements="false" stripComments="false" />
+	</changeSet>
+
+	<changeSet id="initial-changeset" author="Luciano Rey" context="qa">
+		<comment>Creating the initial structure and data of the database</comment>
+		<sqlFile path="sql/db-structure.sql" relativeToChangelogFile="true" splitStatements="false" stripComments="false" />
+		<sqlFile path="sql/db-data-qa.sql" relativeToChangelogFile="true" splitStatements="false" stripComments="false" />
+	</changeSet>
+
+	<changeSet id="initial-changeset" author="Luciano Rey" context="stg">
+		<comment>Creating the initial structure and data of the database</comment>
+		<sqlFile path="sql/db-structure.sql" relativeToChangelogFile="true" splitStatements="false" stripComments="false" />
+		<sqlFile path="sql/db-data-stg.sql" relativeToChangelogFile="true" splitStatements="false" stripComments="false" />
+	</changeSet>
+
+	<changeSet id="initial-changeset" author="Luciano Rey" context="prd">
+		<comment>Creating the initial structure and data of the database</comment>
+		<sqlFile path="sql/db-structure.sql" relativeToChangelogFile="true" splitStatements="false" stripComments="false" />
+		<sqlFile path="sql/db-data-prd.sql" relativeToChangelogFile="true" splitStatements="false" stripComments="false" />
+	</changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,74 @@
+<div class="container booking-review">
+    <header>
+         <div class="col-sm-12">
+             <div class="col-sm-3"></div>
+             <div class="col-sm-6">
+                <h1>{{t 'activity.review.title'}}</h1>
+             </div>
+             <div class="col-sm-3"></div>
+            
+         </div>
+      </header>
+      <div class="row">
+            <div class="col-sm-12">
+                <div>
+                    <div class="col-sm-2">
+                        <img src="{{reviewModel.attributes.activityImage}}" class="media-object" alt="activity">
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <h3>{{reviewModel.attributes.activityTitle}}</h3>
+                </div>
+                <div class="col-sm-2">
+                    <h3>{{reviewModel.attributes.activityDate}}</h3>
+                </div>
+            </div>
+        </div>
+      <form id="confirm-form" >
+            <div class="col-sm-12">
+                <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="fistName" class="control-label label-control" style="padding-top:30px;">{{t 'activity.review.firstName.label'}}</label>
+                                <input id="firstName" data-checkout="firstName" required="required" class="form-control" placeholder="{{t 'payment.personal-information.name.placeholder'}}" value="{{firstName}}"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="lastName" class="control-label label-control" style="padding-top:30px;">{{t 'activity.review.lastName.label'}}</label>
+                                <input id="lastName" data-checkout="lastName" required="required" class="form-control" placeholder="{{t 'payment.personal-information.lastname.placeholder'}}" value="{{lastName}}"/>
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label class="control-label label-control">{{t 'activity.review.calificacion.label'}}</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="rating editable">
+                            <span class="star" ></span>
+                            <span class="star" ></span>
+                            <span class="star" ></span>
+                            <span class="star" ></span>
+                            <span class="star" ></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                            <div class="form-group">
+                                <label  class="control-label label-control">{{t 'activity.review.comentario.placeholder'}}</label>
+                                <textarea name="tempReviewToCustomerComment" required="required" id="rate-comment" maxlength="500" class="form-control label-control" placeholder="{{t 'activity.review.comentario.placeholder'}}"></textarea>
+                            </div>
+                    </div>
+                </div>
+            <div>
+          <button type="submit" class="btn btn-primary btn-raleway">{{t 'activity.review.save.button'}}</button>
+          <a href="" class="btn btn-link btn-pill btn-pill-lg btn-raleway">{{t 'activity.review.exit.button'}}</a>
+        
+      </form>
+      </div>
+      
+</div>

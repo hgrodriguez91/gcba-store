@@ -1,0 +1,56 @@
+.provider-availability-editable {
+  border: @blue-2 solid 2px;
+  color: #888e99;
+  font-size: 12px;
+  margin-bottom: 10px;
+
+  .break(sm, {
+    margin-bottom: 20px;
+  });
+
+  .availability-heading {
+    border-bottom: #888e99 solid 1px;
+    padding: 10px 15px;
+
+    .h4 {
+      margin-top: 0;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      .font-bold;
+      font-size: 14px;
+      color: @blue-2;
+
+      a {
+        color: inherit;
+      }
+    }
+
+    .availability-option {
+      .color {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        .border-radius(3px);
+        background-color: #ddd;
+        float: left;
+        margin-right: 5px;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  .availability-body {
+    border-bottom: #888e99 solid 1px;
+    padding: 7px 15px;
+  }
+
+  .availability-footer {
+    padding: 7px 15px;
+
+    .btn-edit {
+      .font-bold;
+      color: @blue-2;
+    }
+  }
+
+}

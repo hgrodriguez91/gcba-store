@@ -1,0 +1,107 @@
+.activities-list {
+  > section {
+    min-height: 350px;
+    padding-bottom: 50px;
+    background: #ffffff;
+    .container {
+      position: relative;
+
+      .break(sm, {
+        padding-top: 15px;
+        overflow: visible;
+      });
+
+      #activities-filters {
+        .activities-filter-helper() {
+          position: absolute;
+          z-index: 10;
+          left: 0;
+          top: 70px;
+          width: 250px;
+          margin-left: -260px;
+          transition: margin-left 0.4s ease 0s;
+          &.open {
+            margin-left: 0;
+          }
+          #list-filters {
+/*             box-shadow: 2px 2px 4px 0 #888; */
+/*             border: 1px solid @grey-10; */
+            width: 100%;
+            #applied-filters {
+              ul {
+                li {
+                  line-height: 2.7;
+                }
+              }
+            }
+            #available-filters {
+              #price-form {
+                &.form-inline {
+                  input {
+                    font-size: 1em;
+                    height: 3em;
+                    width: 50%;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .break(xxs only, {
+          .activities-filter-helper();
+        });
+        .break(xs only, {
+          .activities-filter-helper();
+        });
+  
+        .break(sm, {
+          top: 0;
+          transition: none;
+          position: relative;
+          width: 20%;
+          float: left;
+          display: block;
+        });
+      }
+      .activity-collection {
+        width: 100%;
+        .break(sm, {
+          margin: 0;
+          float: left;
+          width: 80%;
+          &.no-filters {
+            width: 100%;
+          }
+        });
+      }
+
+      .empty-list {
+        font-size: 2em;
+        text-align: center;
+        margin-top: 80px;
+
+        .break(sm, {
+          margin-top: 0;
+          font-size: 2.5em;
+        });
+
+        .glyphicon {
+          font-size: 1.5em;
+          color: @blue-zelzet;  
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+#activities-filters-btn {
+  position: absolute;
+  top: 6px;
+  left: @grid-gutter-width / 2;
+  .break(sm, {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+  });
+}

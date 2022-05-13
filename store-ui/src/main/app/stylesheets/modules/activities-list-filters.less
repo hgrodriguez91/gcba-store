@@ -1,0 +1,120 @@
+#list-filters {
+  background-color: #fff;
+  margin-right: 5%;
+  padding: 12px;
+  width: 95%;
+  border: 1px solid @grey-10;
+  filter: drop-shadow(1px  1px 3px #797979);
+  .break(sm, {
+    filter: none;
+  });
+
+  ul {
+    padding-left: 5px;
+    list-style: none;
+  }
+
+  h5 {
+    .font-bold-raleway;
+    font-size: 12px;
+    color: #000;
+  }
+
+  #applied-search {
+    display: none;
+    border-bottom: 1px dashed @grey-9;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+
+    h5 {
+      position: relative;
+      line-height: 1.5em;
+
+      a {
+        padding: 0px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+    }
+
+    p {
+      background-color: #f7f7f7;
+      border: 1px solid #ededed;
+      border-radius: 4px;
+      padding: 3px;
+      text-indent: 7px;
+    }
+  }
+
+  #applied-filters {
+    display: none;
+    border-bottom: 1px dashed @grey-9;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    .font-bold-raleway;
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      li {
+        line-height: 2.3;
+        margin-right: 8px;
+        max-width: 100%;
+        a {
+          max-width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          background: #000000;
+        }
+      }
+    }
+  }
+  #available-filters {
+    li {
+      a {
+        text-align: left;
+        white-space: normal;
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.4;
+        padding: 0;
+        color: #000000;
+        .font-regular-raleway;
+        .break(sm, {
+          font-size: 0.9em;
+        });
+      }
+    }
+    #price-form {
+      &.form-inline {
+        display: table;
+        button[type="submit"] {
+            margin-top: 5px;
+            background: #000000;
+            border-color: #000000;
+            .font-bold-raleway;
+        }
+        input {
+          font-size: 1em;
+          height: 3em;
+          &.error {
+            box-shadow: 0 0 5px 1px @red-zelzet;
+            z-index: 5;
+          }
+        }
+        .break(md, {
+          input {
+            width: 50%;
+          }
+        });
+      }
+    }
+  }
+}
+#activities-filters-btn {
+  font-size: 18px;
+  line-height: 1.4;
+  padding: 0 9px 1px;
+}

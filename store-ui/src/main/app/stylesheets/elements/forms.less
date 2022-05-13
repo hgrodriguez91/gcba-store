@@ -1,0 +1,145 @@
+label {
+  color: @form-label-color;
+  font-weight: normal;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  font-size: 12px;
+	
+  .break(sm, {
+    font-size: @font-size-input;
+  });
+
+  &:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  }
+
+  &.error {
+    border-color: @red-zelzet;
+    box-shadow: 0 0 2px 1px @red-zelzet;
+    z-index: 5;
+  }
+}
+
+.form-group {
+
+  .control-label {
+    text-transform: uppercase;
+    font-size: 12px;
+    .font-medium;
+
+    .break(sm, {
+      font-size: 13px;
+    });
+  }
+  
+  .control-label-checkoutbox {
+    text-transform: uppercase;
+    color: white;
+	margin-bottom: 2px;
+    font-size: 12px;
+    .font-medium;
+
+    .break(sm, {
+      font-size: 13px;
+    });  	
+  }
+
+  &.checkbox{
+    margin-bottom: 20px;
+
+    .control-label {
+      text-transform: none;
+      padding-left: 0;
+      font-size: 13px;
+    }
+
+    .form-group.checkbox {
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+  }
+  
+  .select2-chosen {
+  	padding: 9px 12px;
+  }
+  .select2-choice {
+  	> span:first-child {
+  		padding: 9px 12px;
+  	}
+  }
+  .select2-container {
+  	.select2-choices {
+  		.select2-search-field {
+  			input {
+  				padding: 9px 12px;
+  			}
+  		}
+  	}
+   .select2-choice {
+   	.select2-arrow {
+   		b {
+   			background-position: 0 7px;
+   		}
+   		div {
+   		 	b {
+   				background-position: 0 7px;
+   		 	}
+   		}
+   	}
+   }
+  }
+}
+
+.form-control-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 15px;
+  background-color: @input-bg;
+  background-image: none;
+  border: 1px solid @input-border;
+  border-radius: @input-border-radius;
+  margin-right: 7px;
+  .box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+
+  .break(md, {
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+    line-height: 18px;
+  });
+}
+
+.form-control-checkbox input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+.form-control-checkbox input[type=checkbox] + i:before {
+  color: @red-zelzet;
+}
+
+.form-control-checkbox input[type=checkbox]:checked + i:before {
+  content: "\f00c";
+}
+
+.form-submit {
+  text-align: center;
+}
+
+.form-image {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.form-control-feedback {
+	width: 50px;
+}

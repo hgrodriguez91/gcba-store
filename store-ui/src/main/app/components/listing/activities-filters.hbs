@@ -1,0 +1,49 @@
+<nav id="list-filters">
+    <div id="applied-search">
+        <h5>{{t 'listing.filters.search'}}<a href="{{searchRemoveURL}}" class="btn btn-link"><i class="glyphicon glyphicon-remove"></i></a></h5>
+        <p>{{decodeQueryString searchText}}</p>
+    </div>
+    <div id="applied-filters">
+        <h5>{{t 'listing.filters.applied'}}</h5>
+        <ul>
+            {{#each appliedFilters}}
+                <li><a class="btn btn-link btn-pill" title="{{text}}" href="{{link}}">{{text}}<i class="fa fa-remove icon-right"></i></a></li>
+            {{/each}}
+        </ul>
+    </div>
+    <div id="available-filters">
+        {{#any categoryFilters}}
+            <h5>{{t 'listing.filters.categories'}}</h5>
+            <ul>
+                {{#each categoryFilters}}
+                    <li><a class="btn btn-link" title="{{text}}" href="{{link}}">{{text}}</a></li>
+                {{/each}}
+            </ul>
+        {{/any}}
+        {{#any locationFilters}}
+            <h5>{{t 'listing.filters.locations'}}</h5>
+            <ul>
+                {{#each locationFilters}}
+                    <li><a class="btn btn-link" title="{{text}}" href="{{link}}">{{text}}</a></li>
+                {{/each}}
+            </ul>
+        {{/any}}
+        {{#unless isFree}}
+            <h5>{{t 'listing.filters.price'}}</h5>
+            {{#any priceRanges}}
+                <ul>
+                    {{#each priceRanges}}
+                        <li><a class="btn btn-link" title="{{text}}" href="{{link}}">{{text}}</a></li>
+                    {{/each}}
+                </ul>
+            {{/any}}
+            <form id="price-form" class="form-inline">
+                <div class="input-group">
+                    <input type="text" name="fromPrice" maxlength="5" class="form-control" placeholder="{{t 'price.from'}}" value="{{fromPrice}}" />
+                    <input type="text" name="toPrice" maxlength="5" class="form-control" placeholder="{{t 'price.to'}}" value="{{toPrice}}" />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">{{t 'apply'}}</button>
+            </form>
+        {{/unless}}
+    </div>
+</nav>

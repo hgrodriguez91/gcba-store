@@ -1,0 +1,45 @@
+<div class="form-group has-feedback"> 
+<div class="dropdown">
+  <span><input type="text"  class="form-control dropdown-input" id="rateName" name="rateName" readonly placeholder="{{t 'activity.checkout.title-rate'}}" required></input></span>
+  
+  <span id="messageErrorRate" class="error_message" style="color: #ffd300;">{{t 'activity.checkout.message-rate'}}</span>
+  <div id="dropdownRate" >
+    <div class="dropdown-content">
+        <div class="form-group has-feedback" id="parent-rates">
+            <ul class="list-inline" >
+                {{#each oneRates as |rate|}}
+                    <input type="text" class="form-control form-control-dropdown" style="display:none" id="code{{rate.code}}" name="code" value="{{rate.code}}" readonly>
+                    <input type="text" class="form-control form-control-dropdown" style="display:none" id="type{{rate.code}}" name="type" value="{{rate.type}}" readonly>
+                    <div class="row" >
+                        <div class="col-sm-7">
+                            <label for="quantity" class="control-label text-right-dropdown">{{rate.name}}  {{#if rate.ageTo}}({{t 'activity.checkout.rate-age'}} {{rate.ageFrom}}-{{rate.ageTo}}){{/if}} 
+                            {{#if rate.description}}
+                            <a data-toggle="tooltip" data-placement="top" data-original-title="{{rate.description}}">
+                                <i class='glyphicon glyphicon-info-sign'></i>
+                            </a> 
+                            {{/if}}
+                            </label>
+                        </div>
+                        <div class="col-sm-5">
+                            <div class="input-group">
+                                <span class="input-group-btn" ><button type="button" class="btn-circle" id="less{{rate.code}}" data-toggle="{{rate.code}}" disabled>-</button></span>
+                                <span class="border-0"><input type="text" class="form-control form-control-dropdown"  id="quantity{{rate.code}}" name="quantity" value="0" readonly></span> 
+                                <span class="input-group-btn"><button type="button" class="btn-circle" id="more{{rate.code}}" data-toggle="{{rate.code}}">+</button></span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                {{/each}}
+                
+            </ul>
+            <div class="row">
+                <div class="col-sm-12">
+                    <span ><button type="button" class="btn btn-primary btn-apply" id="apply-btn">{{t 'activity.checkout.rate-apply'}}</button></span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+  </div>
+  
+</div>    

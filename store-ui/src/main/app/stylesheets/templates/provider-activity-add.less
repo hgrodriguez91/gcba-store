@@ -1,0 +1,14 @@
+.activity-option-control {
+  & + .activity-option-control {
+    border-top: #d3d5d9 dashed 1px;
+    padding-top: @grid-gutter-width;
+  }
+
+  textarea {
+    min-height: 90px;
+
+    .break(md, {
+      min-height: 100px;
+    });
+  }
+}

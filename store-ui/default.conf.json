@@ -1,0 +1,10 @@
+{
+    "init" : true,
+    "data" : {
+        "app" : {
+            "source": "src/main/app",
+            "target" : "../store-webapp/src/main/webapp/resources/assets",
+            "bin" : "bin"
+        }
+    }
+}

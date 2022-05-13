@@ -1,0 +1,132 @@
+.modal-dialog {
+	.break(sm, {
+		width: 470px;
+	});
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-title {
+  text-align: left;
+  font-size: 1.6em;
+  .font-bold;
+  color: @modal-title-color;
+}
+
+.modal-header {
+  border-bottom: 0;
+  padding-top: @grid-gutter-width;
+  padding-bottom: @grid-gutter-width / 2;
+  padding-left: @grid-gutter-width;
+  padding-right: @grid-gutter-width;
+  .glyphicon {
+    font-size: 1.5em;
+    padding-right: 5px;
+    vertical-align: middle;
+    &.glyphicon-ban-circle {
+      color: @red-zelzet;
+    }
+    &.glyphicon-ok-circle {
+      color: @green-zelzet;
+    }
+  }
+}
+
+.modal-body {
+  padding-top: 0;
+  padding-left: @grid-gutter-width * 1.5;
+  padding-right: @grid-gutter-width * 1.5;
+
+  .form-submit {
+	text-align: left;
+	
+	.btn.btn-lg.btn-link {
+		.break(sm, {
+			padding-left: 10px;
+			padding-right: 0;
+		});
+	}
+  }
+}
+
+.modal-separator {
+  overflow: hidden;
+  padding: 35px 0;
+
+  .modal-separator-circle {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: #a6a6a6 solid 1px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: " ";
+      width: 1000px;
+      border-top: #d3d5d9 solid 1px;
+      top: 50%;
+      right: 15px;
+    }
+
+    &:after {
+      position: absolute;
+      content: " ";
+      width: 1000px;
+      border-top: #d3d5d9 solid 1px;
+      top: 50%;
+      left: 15px;
+    }
+  }
+}
+
+.modal-loading {
+  text-align: center;
+  font-size: 15px;
+  padding-top: 20px;
+}
+
+.modal-footer {
+  padding-top: 20px;
+  padding-bottom: 15px;
+  background-color: @modal-footer-bg;
+  text-align: center;
+  font-size: 15px;
+  color: @modal-footer-color;
+  border-top: 0;
+}
+
+
+body.modal-open {
+  header, main, footer {
+    .blur(10px);
+  }
+}
+
+.ekko-lightbox {
+  .modal-header {
+    padding: 10px;
+  }
+
+  .modal-body {
+    padding: 0 10px 10px;
+  }
+}
+
+.modal-dialog-terms {
+  max-height: 600px;
+  overflow-y: auto;
+  width: 300px;
+
+  .break(sm, {
+    width: 470px;
+  });
+
+  .break(md, {
+    width: 800px;
+  });
+}

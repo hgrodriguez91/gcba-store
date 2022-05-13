@@ -1,0 +1,49 @@
+#booking-container {
+  .container {
+    padding-top: 20px;
+
+    .break(sm, {
+      padding-top: 40px;
+
+    });
+
+    header {
+      text-align: center;
+
+      .break(md, {
+        text-align: inherit;
+      });
+
+      h1 {
+        font-size: 29.77pt;
+        color: #000;
+        .font-bold-vollkorn;
+        .break(sm, {
+          font-size: 39.77pt;
+        });
+      }
+      p {
+        font-size: 1.1em;
+        .font-bold-raleway-semi;
+        .break(md, {
+          font-size: 1.2em;
+        });
+      }
+    }
+
+    .voucher-info {
+      padding-top: 30px;
+      margin: 0 auto;
+      float: none;
+
+      .break(xl, {
+        width: (@container-xl-desktop / 12) * 8;
+      });
+
+      .form-submit {
+        text-align: right;
+        padding-bottom: 30px;
+      }
+    }
+  }
+}

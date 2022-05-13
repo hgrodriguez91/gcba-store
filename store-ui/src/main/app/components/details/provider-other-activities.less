@@ -1,0 +1,115 @@
+.provider-other-activities {
+  background-color: @white;
+  padding: 10px;
+  color: inherit;
+
+  h5 {
+    color: @black;
+    text-align: center;
+    .font-bold-raleway-extra;
+    font-size: 24pt;
+  }
+
+  .labeled-box-body {
+    padding: 0px 0px 20px;
+    .break(sm only, {
+        padding: 0px 10px 20px;
+    });
+    .break(md only, {
+        padding: 0px 10px 20px;
+    });
+  }
+  .btn-apply {
+    .font-bold-raleway-extra;
+    font-size: 11.95pt;
+  }
+  footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .activity-collection {
+    &.activity-collection-grid {
+      padding: (30px / 2);
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+
+      .break(xs only, {
+        flex-flow: row wrap;
+      });
+
+      li {
+        width: 310px;
+        padding: 0 0 8px 0;
+        border-spacing: 0;
+        .break(xs only, {
+          padding: 4px;
+        });
+        .break(sm, {
+          width: 100%;
+        });
+
+        .activity-collection-item {
+          &:hover {
+            box-shadow: 2px 2px 4px 0 rgb(37, 36, 36);
+          }
+          &.activity-collection-item-normal {
+            height: 250px;
+            font-size: 1.3em;
+            .break(sm, {
+              height: 160px;
+            });
+            .break(md, {
+              height: 140px;
+            });
+            .break(lg, {
+              height: 180px;
+            });
+            .break(xl, {
+              height: 250px;
+            });
+
+            .item-place-top {
+              top: 15px;
+              font-size: 0.5em;
+            }
+
+            .item-info {
+              font-size: 1.7em;
+              
+              .item-category {
+                font-size: 0.3em;
+                line-height: 1.2;
+              }
+
+              .item-title {
+                font-size: 0.3em;
+                .break(lg, {
+                  font-size: 0.4em;
+                });
+              }
+            }
+
+            .item-footer {
+              font-size: 0.6em;
+              .item-pricing {
+                padding: 7px;
+                font-size: 0.8em;
+
+                .break(md, {
+                  font-size: 1em;
+                });
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

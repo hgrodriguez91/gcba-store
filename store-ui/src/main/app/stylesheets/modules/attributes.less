@@ -1,0 +1,127 @@
+.home-attributes {
+  padding: 20px 0;
+
+  .slider {
+    overflow: hidden;
+  }
+
+  .container {
+    width: 1120px;
+    max-width: 100%;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  ul {
+    .list-unstyled;
+    display: table;
+    width: 100%;
+
+    li {
+      display: table-cell;
+      color: #fff;
+      font-size: 13px;
+      padding: 0 10px;
+      line-height: 17px;
+      .break(md, {
+        font-size: 17px;
+        line-height: 20px;
+      });
+      .break(md only, {
+        font-size: 14px;
+      });
+      .break(sm only, {
+        font-size: 10px;
+        line-height: 14px;
+      });
+
+
+      .attr-icon {
+        float: left;
+        margin-right: 15px;
+        .break(md only, {
+          width: 45px;
+        });
+        .break(sm only, {
+          width: 30px;
+        });
+
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .attr-name {
+        .font-medium;
+        padding-top: 0;
+        display: table-cell;
+        vertical-align: middle;
+        height: 50px;
+        font-size: 13px;
+
+        .break(sm only, {
+          height: 30px;
+        });
+
+        &.attr-name-xs {
+          font-size: 8px;
+
+          .break(xs, {
+            font-size: 13px;
+          });
+        }
+      }
+    }
+  }
+}
+
+.xs-size {
+  .home-attributes {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .slider {
+      .slider-widget();
+    }
+
+    .slider-scroll {
+      .slider-scroller(2, 2, 2, 2);
+      margin-left: 10px;
+      margin-right: 10px;
+      .break(sm, {
+        margin-left: 0;
+        margin-right: 0;
+      });
+    }
+
+    .navigation {
+      .slider-navigation(25px, 18px);
+
+      .navigation-btn {
+        color: #fff;
+        background: transparent;
+      }
+    }
+
+    ul {
+
+      li {
+        font-size: 8px;
+        padding: 0;
+        line-height: 12px;
+
+        .attr-icon {
+          width: 30px;
+          margin-top: 0;
+          margin-right: 7px;
+        }
+        .attr-name {
+          height: 30px;
+        }
+      }
+    }
+  }
+}

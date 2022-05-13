@@ -1,0 +1,27 @@
+.container {
+/*
+  padding-left: @grid-gutter-width;
+  padding-right: @grid-gutter-width;
+*/
+
+  &.container-xs-no-padding {
+    .break(xxs only, {
+      padding-left: 0;
+      padding-right: 0;
+    });
+
+    .break(xs only, {
+      padding-left: 0;
+      padding-right: 0;
+    });
+  }
+
+/*   .break(sm, { */
+/*     padding-left: 0; */
+/*     padding-right: 0; */
+/*   }); */
+
+  .break(xl, {
+    width: @container-xl;
+  });
+}

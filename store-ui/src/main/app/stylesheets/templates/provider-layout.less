@@ -1,0 +1,38 @@
+.main-provider {
+  .section-title {
+    margin-top: 10px;
+
+    .break(sm, {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    });
+
+    .break(md, {
+      margin-top: 30px;
+    });
+
+    .h1 {
+      .break(sm, {
+        margin: 12px 0;
+      });
+    }
+
+    .section-title-actions {
+      text-align: right;
+    }
+  }
+
+  .panel {
+    &.panel-zelzet {
+      .panel-heading {
+        text-transform: uppercase;
+        color: #333;
+
+        .break(md, {
+          font-size: 16px;
+          padding-top: 25px;
+        });
+      }
+    }
+  }
+}

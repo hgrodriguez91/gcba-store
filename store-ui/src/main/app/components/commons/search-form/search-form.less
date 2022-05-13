@@ -1,0 +1,47 @@
+.search-form {
+  width: 100%;
+  .break(xs, {
+    width: 400px;
+  });
+  .break(sm, {
+    width: 600px;
+  });
+
+  input {
+    height: 33px;
+
+    .break(sm, {
+      height: 37px;
+    });
+
+    &:focus {
+      box-shadow: none !important;
+    }
+    box-shadow: none !important;
+  }
+
+  button {
+    line-height: 2.1em;
+    text-transform: uppercase;
+    font-size: 9px;
+    height: 33px;
+
+    .break(sm, {
+      height: 37px;
+      font-size: 13px;
+      line-height: 1.8em;
+    });
+
+    i {
+      padding-right: 5px;
+      vertical-align: text-bottom;
+      font-size: 1.4em;
+
+      .break(sm, {
+        font-size: 1.2em;
+      });
+    }
+  }
+}
+
+@import "lite/search-form-lite";

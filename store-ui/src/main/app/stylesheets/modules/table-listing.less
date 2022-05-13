@@ -1,0 +1,39 @@
+.table-listing {
+  overflow-x: auto;
+  max-width: 100%;
+
+  table {
+    text-align: center;
+
+    tr {
+
+      th {
+        background-color: @blue-2;
+        color: #ffffff;
+        border-color: @blue-2;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+
+        a {
+          color: inherit;
+        }
+      }
+
+      td {
+
+        &.actions {
+
+          a {
+            .font-medium;
+            color: @blue-2;
+          }
+        }
+      }
+    }
+
+    &.table-striped>tbody>tr:nth-of-type(odd) {
+      background-color: #f5f5f5;
+    }
+  }
+}

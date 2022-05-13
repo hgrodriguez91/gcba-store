@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.zelzet.maven</groupId>
+		<artifactId>parent-pom</artifactId>
+		<version>0.1.6</version>
+	</parent>
+
+	<groupId>com.zelzet.gcba-store</groupId>
+	<artifactId>gcba-store</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<description>Store - Parent Module</description>
+
+	<modules>
+		<module>store-schema</module>
+		<module>store-ui</module>
+		<module>store-core</module>
+		<module>store-webapp</module>
+	</modules>
+
+	<properties>
+		<zz.commons.version>0.1.8</zz.commons.version>
+		<zz.commons.web.version>0.1.20</zz.commons.web.version>
+		<zz.commons.data.version>0.1.57</zz.commons.data.version>
+		<zz.commons.core.version>0.1.9</zz.commons.core.version>
+		<api.gateway.version>0.1.186</api.gateway.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>zelzel-local-repository</id>
+			<name>Zelzet Local Artifacts Repository</name>
+			<url>http://jfrog-artifactory.alternativasinteligentes.com/artifactory/libs-release-local/</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<path>/gcba-store-webapp</path>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

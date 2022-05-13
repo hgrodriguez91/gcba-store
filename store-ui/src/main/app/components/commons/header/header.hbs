@@ -1,0 +1,59 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container container-xs-no-padding">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{{baseURL}}{{urls.home}}" rel="nofollow">
+                <img src="{{logoURL}}" alt="Turismo Ciudad de Buenos Aires">
+            </a>
+            <div class="header-search-form"></div>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-main-collapse">
+            <ul class="nav navbar-nav navbar-right navbar-main">
+                {{#if user.firstName}}
+                    <li class="dropdown user-nav">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="username">{{user.firstName}}&nbsp;{{user.lastName}}</span>
+                            <span class="thumb">
+                            <img src="{{user.photo}}" alt="{{user.firstName}}" onerror="this.src='assets/img/users/user-avatar.png'" height="40" width="40"></span>
+                            <span class="icon"><i class="fa fa-angle-down"></i></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./myaccount/dashboard"><i class="fa fa-user"></i> {{t 'header.my-account'}}</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="./logout"><i class="fa fa-sign-out"></i> {{t 'header.log-off'}}</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown notifications-nav">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-bell-o"></i>
+                            <span class="counter"><span class="badge">0</span></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-notifications">
+                            <div><a href="#" class="view-all">{{t 'header.no-notifications'}}</a></div>
+                        </div>
+                    </li>
+                    <li><a href="./myaccount/user-help"><i class="fa fa-question-circle"></i> {{t 'header.help'}}</a></li>
+                {{else}}
+                    <!--<li {{#if favorites}}class="active"{{/if}}><a id='whishlist' href="{{urls.favorites}}" rel="nofollow" title="{{t 'header.favorites'}}"><i class="fa fa-heart"></i><span>{{t 'header.favorites'}}</span></a></li>
+                    <li {{#if profile}}class="active"{{/if}}><a id='myaccount' href="{{urls.profile}}" rel="nofollow" title="{{t 'header.profile'}}"><i class="fa fa-user"></i><span>{{t 'header.profile'}}</span></a></li>
+                    -->
+                    <div class="lang-selector input-group">
+                        <button type="button" class="btn btn-link" data-toggle="dropdown">
+                            <span class="header-lang"><img src="{{langFlag}}" width="50" height="40" />{{lang}} </span><span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="{{urls.es}}"><img src="{{flagEs}}" alt="{{t 'lang.es'}}" width="30" height="20" /> {{t 'lang.es'}}</a></li>
+                            <li><a href="{{urls.en}}"><img src="{{flagEn}}" alt="{{t 'lang.en'}}" width="30" height="20"/> {{t 'lang.en'}}</a></li>
+                            <li><a href="{{urls.pt}}"><img src="{{flagPt}}" alt="{{t 'lang.pt'}}" width="30" height="20"/> {{t 'lang.pt'}}</a></li>
+                        </ul>
+                    </div>
+                    
+            	{{/if}}
+            </ul>
+        </div>
+    </div>
+</nav>

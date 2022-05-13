@@ -1,0 +1,11 @@
+<div class="form-group has-feedback">
+    <select name="activity-option-selector" class="form-control select2-control input-date" placeholder="{{t 'activity.checkout.choose-an-option'}}" required>
+        <option value="">{{#if isPhone}}{{t 'activity.checkout.choose-an-option'}}{{/if}}</option>
+        {{#select activityOptionCode}}
+            {{#each options.models as |activityOption|}}
+                <option value="{{attributes.code}}" class="option-select">{{attributes.title}}</option>
+            {{/each}}
+        {{/select}}
+    </select>
+<!--     <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none"></span> -->
+</div>

@@ -1,0 +1,57 @@
+.activity-questions {
+  background: @grey-6;
+  padding: 20px 0 20px;
+  border-top: @grey-3 dashed 1px;
+
+  .break(sm, {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  });
+
+  .activity-questions-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    .break(sm, {
+      margin-bottom: 30px;
+    });
+
+    .h2 {
+      margin: 0 0 5px;
+
+      .break(xs only, {
+        font-size: 17px;
+      });
+
+      .break(xxs only, {
+        font-size: 17px;
+      });
+
+    }
+  }
+
+  .activity-questions-form {
+    margin-bottom: 40px;
+  }
+
+  .activity-questions-list {
+    &>ul {
+      &>li {
+        margin-bottom: 20px;
+
+        &+li {
+          padding-top: 20px;
+
+          .break(sm, {
+            border-top: @grey-3 dashed 1px;
+          });
+        }
+      }
+    }
+  }
+
+  .activity-questions-pagination {
+    text-align: center;
+  }
+}

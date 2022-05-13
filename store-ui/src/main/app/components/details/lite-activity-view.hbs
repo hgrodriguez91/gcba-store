@@ -1,0 +1,26 @@
+<li>
+    <a class="activity-collection-item activity-collection-item-normal" href="{{baseURL}}{{activityURL}}/{{item.code}}">
+        <div class="item-media-wrapper">
+            <div>
+                <img src="{{item.image}}" alt="{{item.title}}">
+            </div>
+        </div>
+        <div class="item-body-provider">
+            <div class="item-info">
+                <div class="item-category-provider">{{item.category}}</div>
+                <div class="item-title-provider"><h4>{{item.title}}</h4></div>
+            </div>
+            <div class="item-footer">
+                <div class="item-location"><i class="glyphicon glyphicon-map-marker"></i>{{item.location}}</div>
+                
+                <!--<div class="item-pricing-provider">-->
+                    <div class="item-pricing">
+                        {{discountPrice item.old_price}}
+                        {{activityPrice item.price maximumFractionDigits="0"}}
+                    </div>
+                    <!--<img src="{{baseURL}}assets/img/icons/carrito.png" alt="Carrito"/>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </a>
+</li>

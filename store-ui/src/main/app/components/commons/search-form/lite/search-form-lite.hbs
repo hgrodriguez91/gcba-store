@@ -1,0 +1,6 @@
+<form class="search-form search-form-lite" spellcheck="false" autocomplete="off" action="{{formURL}}">
+    <div class="input-group">
+        <input type="text" name="s" maxlength="80" required="required" class="form-control" {{#if placeholder}}placeholder="{{t placeholder}}"{{/if}} value="{{value}}">
+        <span class="input-group-btn"><button class="btn btn-default" type="submit" title="{{t 'search-form.search'}}"><i class="glyphicon glyphicon-search"></i><span class="hide">{{t 'search-form.search'}}</span></button></span>
+    </div>
+</form>

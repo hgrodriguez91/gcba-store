@@ -1,0 +1,76 @@
+<div class="order-resume labeled-box">
+    <span class="labeled-box-flag"><i class="labeled-box-flag-icon fa fa-lock"></i>{{t 'booking.details.booked'}}</span>
+    <div class="labeled-box-body">
+        <div class="order-table-title">
+            <div class="order-table-cell clearfix text-center">{{t 'booking.details.booking-number' bookingNumber=bookingNumber}}</div>
+        </div>
+        <div class="order-table-top">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="order-table-cell">
+                        <div class="clearfix"><i class="fa fa-user"></i> {{customerName}}</div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="order-table-cell">
+                        <div class="clearfix"><i class="fa fa-envelope"></i> {{customerEmail}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order-table-top">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="order-table-cell">
+                        <div class="clearfix"><i class="fa fa-cart-plus"></i> {{activityTitle}}</div>
+                        <div class="clearfix"><i class="fa fa-cart-plus"></i> {{activityOptionTitle}}</div>
+                    </div>
+                    <div class="order-table-cell">
+                        <div class="clearfix"><i class="fa fa-users"></i> {{t 'booking.details.adults' count=adultsQuantity}} | {{t 'booking.details.minors' count=minorsQuantity}}</div>
+                        <div class="clearfix"><i class="fa fa-calendar"></i> {{parseBookingDate bookingDate}} {{simpleTime bookingTime}}</div>
+                    </div>
+                    <div class="order-table-cell">
+                        <div class="clearfix"><i class="fa fa-map-marker"></i> {{address}}</div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="order-table-cell">
+                        <img class="order-activity-image" src="{{activityImage}}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order-table-top">
+            <div class="row">
+                <div class="col-sm-6 border-right">
+                    <div class="order-table-cell">
+                        <div class="provider-resume-image"><img src="{{sellerImage}}" alt="{{sellerName}}"></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="order-table-cell">
+                        <div><i class="fa fa-user"></i> {{sellerName}}</div>
+                        <div><i class="fa fa-envelope"></i> {{sellerEmail}}</div>
+                        <div><i class="fa fa-phone"></i> {{sellerPhone}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order-table-bottom">
+            <div class="row">
+                <div class="col-sm-6 border-right">
+                    <div class="order-table-cell">
+                        <div class="clearfix"><i class="fa fa-money"></i> {{t 'booking.details.adults-price'}} <span class="amount">{{money adultsUnitPrice}}</span></div>
+                        <div class="clearfix"><i class="fa fa-money"></i> {{t 'booking.details.minors-price'}} <span class="amount">{{money minorsUnitPrice}}</span></div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="order-table-cell">
+                        <div class="clearfix"><i class="fa fa-money"></i> {{t 'booking.details.booking-payment'}} <span class="amount">{{money bookingPayment}}</span></div>
+                        <div class="clearfix"><i class="fa fa-money"></i> {{t 'booking.details.open-balance'}} <span class="amount">{{money openBalance}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

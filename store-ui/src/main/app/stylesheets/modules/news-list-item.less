@@ -1,0 +1,117 @@
+.news-list-item {
+  text-align: center;
+  margin-bottom: (@grid-gutter-width * 2);
+
+  .break(sm, {
+    border-bottom: #c2c2c2 solid 1px;
+  });
+
+  .break(md, {
+    padding-top: @grid-gutter-width;
+  });
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  .image {
+    margin-left: (@grid-gutter-width * -1);
+    margin-right: (@grid-gutter-width * -1);
+    margin-bottom: @grid-gutter-width;
+    overflow: hidden;
+
+    .break(xs, {
+      margin-left: 0;
+      margin-right: 0;
+    });
+
+    a {
+      display: block;
+      margin-left: (@grid-gutter-width * -2);
+      margin-right: (@grid-gutter-width * -2);
+
+      .break(xs, {
+        margin-left: 0;
+        margin-right: 0;
+      });
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+
+  blockquote {
+    .break(sm, {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: (@grid-gutter-width * 3);
+      padding-right: (@grid-gutter-width * 3);
+    });
+
+    .break(md, {
+      padding: (@grid-gutter-width / 2) (@grid-gutter-width * 5);
+    });
+  }
+
+  .owner {
+    margin-bottom: @grid-gutter-width;
+    color: @blue-2;
+    line-height: 1.2;
+
+    .break(md, {
+      margin-bottom: (@grid-gutter-width * 2);
+    });
+
+    .fullname{
+      font-size: 13px;
+      .font-medium;
+      text-transform: uppercase;
+
+      .break(md, {
+        font-size: 17px;
+      });
+    }
+
+    .skill {
+      font-size: 12px;
+
+      .break(md, {
+        font-size: 14px;
+      });
+    }
+  }
+
+  .view-more-button {
+    .bg-box;
+    .bg-box-light-grey;
+    .bg-box-shadow;
+    margin-bottom: @grid-gutter-width;
+    margin-left: (@grid-gutter-width * -1);
+    margin-right: (@grid-gutter-width * -1);
+    padding: 5px @grid-gutter-width;
+
+    .break(sm, {
+      .box-shadow(none);
+      background-color: transparent;
+    });
+  }
+
+  .activity-share {
+    .break(sm, {
+      text-align: center;
+      margin-bottom: (@grid-gutter-width / 2);
+    });
+
+    li {
+      a {
+        .break(sm, {
+          padding-left: 15px;
+          padding-right: 15px;
+        });
+      }
+    }
+  }
+}

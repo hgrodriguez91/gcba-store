@@ -1,0 +1,65 @@
+<div class="activities-list">
+    <header class="activities-list-header" {{#if background_image}} style="background-image: url({{background_image}}); color: #fff" {{/if}}>
+        <div class="container">
+            {{#if isFavoritesList}}
+                <h1>{{t 'favorites.title'}}</h1>
+            {{else}}
+                {{#if isCollectionList}}
+                    <h1  {{#if background_image}} style="color: #fff" {{/if}}>{{title}}</h1>
+                    <h3 {{#if background_image}} style="color: #fff" {{/if}}>{{subtitle}}</h3>
+                {{else}}
+                    <h1 {{#if background_image}} style="color: #fff" {{/if}}>{{t 'listing.title'}}</h1>
+                    <h3 {{#if background_image}} style="color: #fff" {{/if}}>{{t 'listing.subtitle'}}</h3>
+                {{/if}}
+            {{/if}}
+        </div>
+    </header>
+    <section class="bg-box">
+        <div class="container">
+            <div class="activities-list-bar">
+                {{#unless isFavoritesList}}
+                    {{#any activities}}<p class="total-counter">{{t 'listing.activities-label' count=total_elements}}</p>{{/any}}
+                {{/unless}}
+                <ul class="nav nav-params">
+                    <li class="list-size dropdown">
+                        <button class="btn btn-default dropdown-toggle dropdown-menu-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <i class="glyphicon glyphicon-list"></i><span class="highlight">{{size}}</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="{{pageSizes.ten}}">10</a></li>
+                            <li><a href="{{pageSizes.twentyFive}}">25</a></li>
+                        </ul>
+                    </li>
+                    {{!--
+                    <li class="list-sort dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <i class="fa fa-sort"></i><span class="highlight">Más Relevante</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="#">Más Recomendado</a></li>
+                            <li><a href="#">Más Barato</a></li>
+                        </ul>
+                    </li>
+                    --}}
+                </ul>
+            </div>
+            {{#if showFilters}}<section id="activities-filters"></section>{{/if}}
+            {{#any activities}}
+                <ul class="list-unstyled {{#unless showFilters}}no-filters{{/unless}} activity-collection activity-collection-list">
+                    {{{collectionOf 'activityListItem' activities}}}
+                </ul>
+                <nav id="pagination"></nav>
+            {{/any}}
+            {{#empty activities}}
+                <p class="empty-list">
+                    <i class="glyphicon glyphicon-exclamation-sign"></i>
+                    {{#if isFavoritesList}}
+                        {{t 'favorites.empty'}}
+                    {{else}}
+                        {{t 'listing.empty'}}
+                    {{/if}}
+                </p>
+            {{/empty}}
+        </div>
+    </section>
+</div>

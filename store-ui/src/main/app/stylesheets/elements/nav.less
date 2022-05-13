@@ -1,0 +1,19 @@
+.nav-zelzet {
+  text-align: center;
+
+  &>li {
+
+    & + li {
+      margin-left: 0;
+    }
+
+    &>a{
+      color: #5c5c5c;
+    }
+
+    &.active>a, &.active>a:hover, &.active>a:focus {
+      background-color: @blue-3;
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.draggable-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  a {
+    cursor: pointer;
+  }
+  &:hover {
+    .draggable-slider-arrow {
+      cursor: pointer;
+      display: block;
+    }
+  }
+
+  .draggable-slider-arrow {
+    position: absolute;
+    background: transparent url("draggable-slider-sprite.png") no-repeat scroll 0 0;
+    cursor: pointer;
+    overflow: hidden;
+    height: 53px;
+    width: 40px;
+    z-index: 999;
+    top: 36px;
+
+    &.back {
+      left: 0;
+      background-position: -255px -35px;
+      &:hover {
+          background-position: -15px -35px;
+      }
+      &:active {
+          background-position: -135px -35px;
+      }
+    }
+    &.forward {
+      right: 0;
+      background-position: -305px -35px;
+      &:hover {
+          background-position: -65px -35px;
+      }
+      &:active {
+          background-position: -185px -35px;
+      }
+    }
+  }
+
+  ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

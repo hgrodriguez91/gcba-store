@@ -1,0 +1,106 @@
+<div class="container booking-cancelation-details" >
+    <header>
+         <div class="col-sm-12" style="text-align: center;">
+             <div class="col-sm-1"></div>
+             <div class="col-sm-10">
+                <h1>{{t 'booking.cancel.title'}}</h1>
+             </div>
+             <div class="col-sm-1">
+
+             </div>
+         </div>
+
+         <div class="col-sm-12" style="text-align: center;">
+             <div class="col-sm-3"></div>
+             <div class="col-sm-6">
+                <h1>{{activityName}}</h1>
+             </div>
+             <div class="col-sm-3">
+
+             </div>
+         </div>
+      </header>
+      <div class="row">
+            <div class="col-sm-12">
+                <div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                                <label for="fistName" class="control-label label-regular" style="padding-top: 5px; padding-left: 15px;">{{t 'booking.cancel.name-client'}}: </label>
+                                <label for="fistName" class="control-label label-bold" style="padding-top: 5px;"><b>{{customerName}}</b></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                                <label for="fistName" class="control-label label-regular" style="padding-top: 5px; padding-left: 15px;">{{t 'booking.cancel.booking-number'}}: </label>
+                                <label for="fistName" class="control-label" style="padding-top: 5px;"><b>{{bookingNumber}}</b></label>
+                        </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group">
+                            <label for="fistName" class="control-label label-regular" style="padding-top: 5px; padding-left: 15px;">{{t 'booking.cancel.activity-date'}}: </label>
+                            <label for="fistName" class="control-label label-bold" style="padding-top: 5px;"><b>{{date}}</b></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <form id="confirm-partial-form" >
+           <div class="dropdown">
+                <div class="col-sm-12">
+                    <div class="col-sm-12">
+                    <div class="col-sm-12">
+                        <div >
+                            <ul class="list-inline">
+                                {{#each optionsRate as |rate|}}
+                                    <div class="row">
+                                        <input type="text" class="form-control form-control-dropdown" style="display:none" id="code{{rate.code}}" name="code" value="{{rate.code}}" readonly>
+                                        <input type="text" class="form-control form-control-dropdown" style="display:none"  id="type{{rate.code}}" name="type" value="{{rate.type}}" readonly>
+                                        <input type="text" class="form-control form-control-dropdown" style="display:none" id="max{{rate.code}}" name="max" value="{{rate.quantity}}" readonly>
+                                        <div class="col-sm-2"></div>
+                                        <div class="col-sm-3">
+                                            <div class="form-group" style="margin-bottom: 9px; margin-top: 20px">
+                                                <label for="quantity" class="control-label label-regular">{{rate.name}} {{#if rate.age_to}} ({{t 'activity.checkout.rate-age'}} {{rate.age_from}}-{{rate.age_to}}){{/if}}</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" style="margin-left: -10px; margin-top: 20px">
+                                             <div class="col-sm-4" >
+                                                <div class="input-group input-group-rate">
+                                                    <span class="input-group-btn label-regular"><button type="button" class="btn-circle" id="less{{rate.code}}" data-toggle="{{rate.code}}" >-</button></span>
+                                                     <div class="col-sm-12">
+                                                         <span class="border-0 label-regular"><b><input type="text" class="form-control-dropdown"  id="quantity{{rate.code}}" name="quantity" value="{{rate.quantity}}" readonly></b></span> 
+                                                     </div>
+                                                    
+                                                    <span class="input-group-btn label-regular"><button type="button" class="btn-circle" id="more{{rate.code}}" data-toggle="{{rate.code}}" disabled>+</button></span>
+                                                </div>
+                                             </div>
+                                             <div class="col-sm-8">
+                                                <div class="input-group" style="margin-left: -10px;">
+
+                                                    <div class="col-sm-12">
+                                                        <span class="border-0"><input type="text" class="form-control-dropdown label-regular" style="width: 115px; text-align: right; padding-left: 5px;" id="nameCancel" value="{{t 'booking.cancel.input-cancel'}}" readonly></span> 
+                                                        <span class="border-0"><input type="text" class="form-control-dropdown label-regular" style="width: 15px; text-align: left;"  id="numberCancel{{rate.code}}" name="numberCancel" value="0" readonly></span> 
+                                                        <span class="border-0"><input type="text" class="form-control-dropdown label-regular" style="width: 46%; text-align: left;"    value="{{rate.name}}" readonly></span> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1">
+                                        </div>
+                                    </div>
+                                {{/each}}
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+                 <div class="col-sm-12">
+                     <div class="col-sm-3">
+                        <button type="submit" class="btn btn-primary btn-raleway-cancel">{{t 'booking.confirm.cancel'}}</button>
+                            <a href="" class="btn btn-link btn-pill btn-pill-lg btn-raleway">{{t 'booking.confirm.exit'}}</a>
+                    </div>
+                 </div>
+             </div>
+       </form>
+</div>

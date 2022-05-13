@@ -1,0 +1,80 @@
+.user-notification {
+  text-align: center;
+  background-color: #fcffc9;
+  border: #edf46e solid 1px;
+  padding: @grid-gutter-width @grid-gutter-width (@grid-gutter-width / 2);
+  margin-left: (@grid-gutter-width * -1);
+  margin-right: (@grid-gutter-width * -1);
+
+  .break(sm, {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: @grid-gutter-width;
+    display: table;
+    width: 100%;
+    text-align: left;
+    padding: @grid-gutter-width;
+  });
+
+  .notification-body {
+    padding-bottom: (@grid-gutter-width / 2);
+
+    .break(sm, {
+      display: table-cell;
+      vertical-align: middle;
+      width: 2000px;
+      padding-bottom: 0;
+      padding-right: @grid-gutter-width;
+    });
+
+    .h4 {
+      font-size: 14px;
+      margin-top: 0;
+
+      .break(sm, {
+        margin-bottom: 5px;
+      });
+
+      .break(md, {
+        font-size: 17px;
+      });
+    }
+
+    p {
+      font-size: 12px;
+      margin-bottom: 0;
+
+      .break(md, {
+        font-size: 14px;
+      });
+    }
+  }
+
+  .notification-button {
+    padding-bottom: (@grid-gutter-width / 2);
+
+    .break(sm, {
+      display: table-cell;
+      vertical-align: middle;
+      padding-bottom: 0;
+    });
+
+    .btn {
+      background-color: transparent !important;
+    }
+  }
+
+  .notification-close {
+
+    .break(sm, {
+      display: table-cell;
+      vertical-align: middle;
+    });
+
+    a {
+      display: inline-block;
+      padding: 5px 10px;
+    }
+  }
+
+}

@@ -1,0 +1,148 @@
+.comment {
+  margin-bottom: 15px;
+
+  .break(sm, {
+    margin-bottom: 23px;
+  });
+
+  .media {
+    margin-top: 5px;
+  }
+
+  .media-left {
+    .break(sm, {
+      padding-right: 18px;
+    });
+
+    a {
+      display: block;
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+      .border-radius(50%);
+
+      .break(sm, {
+        width: 60px;
+        height: 60px;
+      });
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .media-body {
+    background: #ffffff;
+    position: relative;
+    overflow: visible;
+    border: #FFFFFF solid 1px;
+
+    &:before {
+      border-left: transparent 9px solid;
+      border-right: transparent 9px solid;
+      border-top: #FFFFFF 11px solid;
+      content: ' ';
+      position: absolute;
+      left: -9px;
+      top: -1px;
+    }
+
+    &:after {
+      border-left: transparent 9px solid;
+      border-right: transparent 9px solid;
+      border-top: #FFFFFF 11px solid;
+      content: ' ';
+      position: absolute;
+      left: -7px;
+      top: 0;
+    }
+  }
+
+  .comment-body {
+    display: table-cell;
+    padding: (@grid-gutter-width / 2) (@grid-gutter-width * .75);
+    color: @grey-5;
+    font-size: 12px;
+    line-height: 1.4;
+
+    .break(sm, {
+      padding: 20px;
+      font-size: 13px;
+    });
+
+    .break(md, {
+      padding: 25px;
+      font-size: 14px;
+    });
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .comment-details {
+    display: table;
+    width: 100%;
+    font-size: 12px;
+
+    .break(sm, {
+      font-size: 13px;
+    });
+
+    .break(md, {
+      font-size: 14px;
+      margin-bottom: 5px;
+    });
+
+    .date {
+      display: table-cell;
+      width: 60px;
+      text-align: center;
+
+      .break(sm, {
+        width: 70px;
+      });
+    }
+
+    .target {
+      display: table-cell;
+      padding-left: (@grid-gutter-width * .75);
+      vertical-align: bottom;
+      padding-bottom: 5px;
+
+      .break(sm, {
+        padding-left: (@grid-gutter-width * 1.5);
+      });
+
+      a {
+        color: @blue-2;
+        .font-medium;
+      }
+    }
+  }
+
+  .comment-rating {
+    display: table-cell;
+    width: 75px;
+
+    .break(sm, {
+      width: 100px;
+    });
+
+    .rating {
+      .break(xs only, {
+        font-size: 12px;
+      });
+
+      .break(xxs only, {
+        font-size: 12px;
+      });
+
+      .break(sm, {
+        font-size: 15px;
+      });
+
+    }
+  }
+}

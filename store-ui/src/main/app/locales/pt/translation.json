@@ -1,0 +1,579 @@
+{ 
+    "user" : {
+        "error" : {
+            "already-logged-with-zelzet" : "O usuário já está registrado com uma conta de Zelzet.",
+            "already-logged-with-facebook" : "O usuário já está registrado com uma conta Facebook.",
+            "invalid" : {
+                "password" : "A senha está incorreta.",
+                "provider" : {
+                    "info" : "A informação de login do Facebook está incorreta."
+                }
+            },
+            "not" : {
+                "exists" : "O usuário não existe.",
+                "active" : "O usuário está desativado. Por favor, entre em contato conosco.",
+                "logged" : "Não há um usuário logado na plataforma para poder operar."
+            },
+            "already" : {
+                "exists" : "Já há um usuário registrado com esse email"
+            },
+            "loading-image" : {
+                "title" : "Erro no download da imagem"
+            }
+        },
+        "email" : {
+            "empty" : "O campo email não pode estar vazio."
+        },
+        "password" : {
+            "empty" : "O campo senha não pode estar vazio."
+        }
+    },
+    "customer" : {
+        "error" : {
+            "email" : {
+                "invalid" : "O endereço de email é inválido."
+            }
+        }
+    },
+    "availability" : {
+        "checking" : "Aguarde um instante por favor, estamos checando a disponibilidade...",
+        "unavailable" : {
+            "title": "Não disponível",
+            "text": "Não há disponibilidade para esta atividade para essa data, horário e quantidade de pessoas."
+        },
+        "error" : {
+            "title": "Ocorreu um erro",
+            "unexpected" : "Ocorreu um erro, por favor tente novamente.",
+            "checkavailabilityevent": {
+                "notfound" : "Não existe uma reserva com esse código."
+            }
+        }
+    },
+    "CONFIRMED" : "Confirmado",
+    "PENDING" : "Pendente",
+    "CANCELLED" : "Cancelado",
+    "REJECTED" : "Rejeitado",
+    "APPROVED" : "Aprovado",
+    "FAILED" : "Falha",
+    "UNKNOW" : "Erro",
+    "IN_PROCESS" : "Processando",
+    "home" : {
+        "slider" : {
+            "life-is-outside" : "Viva o melhor de Buenos Aires",
+            "discovery" : "Atividades",
+            "title": "Viva o melhor de Buenos Aires"
+        },
+        "online-booking-percentage" : "Faça sua reserva online pagando <span class='percentage'>__percentage__%</span>",
+        "categories-title" : "Escolha sua categoria preferida e descubra a experiência perfeita para você",
+        "recommended-title" : "Atividades com melhor classificação",
+        "most-popular-title" : "Atividades mais reservadas",
+        "most-popular-locations-title" : "Lugares mais populares"
+    },
+    "footer" : {
+        "about-the-site" : "Sobre o site",
+        "add-your-experiences" : "Some as suas experiências",
+        "booking-activities" : "Reserve atividades",
+        "follow-us" : "Siga nossas redes sociais",
+        "tools": "Ferramentas"
+    },
+    "header" : {
+        "my-account" : "Minha Conta",
+        "log-off" : "Encerrar sessão",
+        "no-notifications" : "Não há notificações",
+        "help" : "Ajuda",
+        "favorites" : "Favoritos",
+        "profile" : "Perfil"
+    },
+    "payment" : {
+        "processing" : "Aguarde um momento, por favor; estamos processando seu pagamento...",
+        "loading" : "Aguarde um momento, por favor; estamos carregando a informação de pagamento...",
+        "error" : {
+            "no" : {
+                "booking" : "Não há nenhuma reserva deste usuário para processar este momento."
+            },
+            "duplicated" : "Já existe um pagamento registrado pendente de processamento para esta reserva. Em breve enviaremos um email."
+        },
+        "status" : {
+            "APPROVED" : "Aprovado",
+            "PENDING" : "Pendente",
+            "CANCELLED" : "Cancelado",
+            "REJECTED" : "Rejeitado",
+            "FAILED" : "Falha",
+            "UNKNOW" : "Erro",
+            "IN_PROCESS" : "Processando"
+        },
+        "please-fill-info" : "Por favor, complete seus dados",
+        "required-info" : "Os dados requeridos são necessários para confirmar a reserva.",
+        "after-booking" : {
+            "title" : "O que acontece depois de feita a reserva?",
+            "email-info" : "Você vai receber um email com a confirmação da sua reserva e os dados da experiência. Se desejar, também poderá ver os detalhes entrando na sua conta.",
+            "provider-notification" : "O provedor será notificado da reserva.",
+            "provider-contact-info" : "Você pode entrar em contato com o provedor em caso de qualquer dúvida ou consulta."
+        },
+        "disclaimer" : "O Governo da Cidade de Buenos Aires não intervém nas transações entre usuários e provedores, exceto as atividades organizadas pela BA Tourism.",
+        "personal-information" : {
+            "email" : {
+                "label" : "Email",
+                "placeholder" : "Por favor, complete os dados do seu email"
+            },
+            "name" : {
+                "label" : "Nome",
+                "placeholder" : "Por favor, complete os dados do seu nome"
+            },
+            "lastname" : {
+                "label" : "Sobrenome",
+                "placeholder" : "Por favor, complete os dados do seu sobrenome"
+            },
+            "country" : {
+                "label" : "País de residência"
+            },
+            "state" : {
+                "label" : "Estado"
+            },
+            "gender" : {
+                "label" : "Gênero"
+            }
+        },
+        "reservation-resume" : {
+            "safe-site" : "Site seguro",
+            "total-price" : "Valor total",
+            "payment-on-site" : "A pagar no dia da atividade"
+        },
+        "credit-card" : {
+            "number" : {
+                "label" : "Número do cartão",
+                "placeholder" : "Por favor, complete os dados do seu cartão de crédito",
+                "tooltip" : "Por favor, complete o número do seu cartão de crédito, sem símbolos e sem espaços."
+            },
+            "type" : {
+                "label" : "Cartão de crédito"
+            },
+            "issuer" : {
+                "label" : "Emissor do cartão",
+                "tooltip" : "Por favor, complete os dados do emissor do seu cartão de crédito. No caso de não encontrá-lo, selecione 'outro'."
+            },
+            "name" : {
+                "label" : "Nome do titular",
+                "placeholder" : "Por favor, complete os dados do nome completo do titular",
+                "tooltip" : "Por favor, complete os dados do nome completo do titular do cartão de crédito, como aparece no mesmo."
+            },
+            "card-security-code" : {
+                "label" : "Código de segurança",
+                "placeholder" : "Por favor, complete os dados do ccv",
+                "tooltip" : "Por favor, complete os dados do código de segurança do cartão de crédito, que está na parte traseira, perto da assinatura."
+            },
+            "expiration-month" : {
+                "label" : "Mês de vencimento"
+            },
+            "expiration-year" : {
+                "label" : "Ano de vencimento"
+            }
+        },
+        "document-type" : {
+            "label" : "Tipo de documento",
+            "tooltip" : "Por favor, selecione o tipo de documento. No caso de não ser argentino, você deve selecionar a opção 'outro'."
+        },
+        "document-number" : {
+            "label" : "Número do documento",
+            "placeholder" : "Por favor, complete os dados do número de documento",
+            "tooltip" : "Por favor, complete os dados do número de documento sem espaços ou hífens."
+        },
+        "terms-and-conditions-1" : "Declaro que li e concordo com os termos e condições",
+        "terms-and-conditions-2" : "termos e condições",
+        "confirm-booking" : "Confirmar a reserva"
+    },
+    "activity" : {
+        "status" : {
+            "CREATED" : "Criada",
+            "CLOSED" : "Fechada",
+            "APPROVED" : "Aprovada",
+            "PENDING_TO_REVIEW" : "Pendente"
+        },
+        "recommended" : "Recomendada",
+        "online-booking" : "Reserva online",
+        "special-offer": "",
+        "nonexistent" : "A atividade não existe.",
+        "details" : {
+        	"special-offer" : "Oferta Especial",
+            "online-booking" : "Reserva online",
+            "book-now" : "Reservar agora",
+            "coming-soon" : "Em breve",
+            "book-here": "Reserva aqui",
+            "difficulty" : "Dificuldade",
+            "duration" : "Duração",
+            "cancelation" : "Cancelamento",
+            "confirmation" : "Confirmação",
+            "available-options" : "Opções disponíveis",
+            "select" : "Selecionar",
+            "highlights" : "Destacados da experiência",
+            "includes" : "O que inclui a experiência",
+            "excludes" : "O que não inclui a experiência",
+            "recommendations" : "Recomendações sobre a experiência",
+            "restrictions" : "Restrições sobre a experiência",
+            "certificate" : "Certificado",
+            "see-more" : "Ver mais",
+            "other-activities-from" : "Outras atividades de __name__",
+            "similar" : "Atividades experiências",
+            "opinions" : "Opiniões",
+            "the-count-opinions": "de __name__ Opiniões",
+            "map": "Onde seremos",
+            "email": "Email",
+            "question": "Inquérito",
+            "send": "Send",
+            "enter-question": "Digite seu inquérito",
+            "enter-email": "Digite seu email",
+            "enter-email-question": "Anote sua consulta de atividade abaixo",
+            "question-message": "O inquérito foi enviado ao provedor",
+            "more-question": "Carregar mais"
+        },
+        "review":{
+            "error":{
+                "review":{
+                    "qualified": {
+                        "existent": "Já existe uma revisão para esta reserva.",
+                        "time": {
+                            "expired": "Após os 45 dias da data de atividade, não permitimos a qualificação."
+                        }
+                    }
+                }
+            },
+            "thanks" : {
+                "title" : "Muito obrigado, pela sua opinião. "
+            },
+            "message": "Aguarde alguns momentos, por favor, estamos processando sua opinião",
+            "comentario": {
+                "placeholder":"Insira o comentário"
+            },
+            "calificacion": {
+                "label": "Insira a classificação"
+            },
+            "save": {
+                "button": "Salvar"
+            },
+            "exit": {
+                "button": "Saia"
+            },
+            "firstName":{
+                "label":"Digite seu nome"
+            },
+            "lastName":{
+                "label": "Digite seu sobrenome"
+            },
+            "title": "Deixe a sua opinião sobre a experiência"
+        },
+        "checkout" : {
+            "do-it-now" : "Faça agora!",
+            "price-per-person-start-at" : "Preço por pessoa desde",
+            "choose-time" : "Selecione o horário",
+            "available-quota" : "__count__ lugar disponível",
+            "available-quota_plural" : "__count__ lugares disponíveis",
+            "minors-label" : "Menores",
+            "adults-label" : "Adultos",
+            "choose-an-option" : "Selecione uma opção",
+            "limited-quota" : "Máximo de <strong>__count__</strong> pessoa por reserva",
+            "limited-quota_plural" : "Máximo de <strong>__count__</strong> pessoas por reserva",
+            "promocode-label" : "Eu tenho um cupom de desconto",
+            "promocode-placeholder" : "Digite o código",
+            "active-false": "A atividade é concluída",
+            "title-calendar": "Selecione dia e horário",
+            "title-rate": "Selecione a quantidade de passageiro",
+            "rate-apply": "Aplicar",
+            "rate-age": "Idade",
+            "message-rate": "Você deve entrar em um adulto."
+        },
+        "cancelation-policies" : {
+            "title" : "Política de Cancelamento",
+            "super-flexible" : {
+                "title" : "Super Flexível",
+                "description" : "Se o cliente cancelar sua atividade em até 3 horas antes, será reembolsado no valor total da reserva, exceto os gastos administrativos se houver."
+            },
+            "flexible" : {
+                "title" : "Flexível",
+                "description" : "Se o cliente cancelar sua atividade em até um dia antes, será reembolsado no valor total da reserva, exceto os gastos administrativos se houver."
+            },
+            "moderated" : {
+                "title" : "Moderada",
+                "description" : "Se o cliente cancelar sua atividade em até 3 dias antes, será reembolsado no valor total da reserva, exceto os gastos administrativos se houver."
+            },
+            "strict" : {
+                "title" : "Estrita",
+                "description" : "Se o cliente cancelar sua atividade em até 7 dias antes, será reembolsado no valor total da reserva, exceto os gastos administrativos se houver."
+            },
+            "super-strict" : {
+                "title" : "Super estrita",
+                "description" : "Se o cliente cancelar sua atividade em até 15 dias antes, será reembolsado no valor total da reserva, exceto os gastos administrativos se houver."
+            },
+            "disclaimer" : {
+                "title" : "Importante",
+                "description" : "É usado como referência o horário das 10:00 AM para o cálculo dos dias. Passado o periodo de cancelamento não há devolução do valor pago."
+            }
+        },
+        "confirmation-types" : {
+            "title" : "Tipos de Confirmación",
+            "instant" : {
+                "title" : "Confirmación Instantánea",
+                "description" : "La reserva es confirmada automáticamente al momento de ser realizada. No requiere intervención ni aceptación por parte del prestador."
+            },
+            "manual" : {
+                "title" : "Confirmación Manual",
+                "description" : "La reserva debe ser aceptada por el prestador para que ésta pueda ser confirmada."
+            },
+            "minimum-quota" : {
+                "title" : "Confirmación con Ocupación Mínima",
+                "description" : "La reserva es confirmada automáticamente cuando se cumple el cupo mínimo requerido que el prestador ha fijado para la actividad. Hasta tanto no se haya completado ese cupo, la reserva estará pendiente de confirmación."
+            },
+            "disclaimer" : {
+                "title" : "Importante",
+                "description" : "Como primer requisito para realizar la reserva de la actividad (actividades con precio), se realiza la autorización del pago. En caso de que la reserva no sea confirmada para el momento en que se lleva acabo la actividad, o por haber sido rechazada por el proveedor, el pago será devuelto en su totalidad, a excepción de los gastos administrativos si los hubiere."
+            }
+        }
+    },
+    "password" : {
+        "error" : {
+            "not-equals" : "As duas contrasenhas não são iguais.",
+            "length" : "A contrasenha deve ter no mínimo 6 caracteres."
+        }
+    },
+    "booking" : {
+        "loading" : "Por favor, aguarde un momento, estamos carregando a informação da sua reserva...",
+        "canceling" : "Por favor, aguarde un momento, estamos cancelando sua reserva...",
+        "rejected": {
+            "title": "Desculpe, a sua reserva foi rejeitada.",
+            "next-minutes": "Sua reserva foi rejeitada. Você pode reservar outra atividade ou tentar novamente mais tarde. Muito obrigado."
+        },
+        "confirm": {
+            "messaje": "Tem certeza que deseja cancelar sua reserva?",
+            "cancel": "Cancelar Reserva",
+            "exit" : "Saída"
+        },
+        "pending": {
+            "title": "Sua reserva está pendente de confirmação, obrigado.",
+            "next-minutes": "Sua reserva ainda não foi confirmada. Em breve você receberá um email com a informação correspondente."
+        },
+        "error" : {
+            "nonexistent-code" : "Não existe uma reserva com esse código.",
+            "limit" : {
+                "datetime" : "A reserva não pode ser confirmada neste momento porque foi excedido o tempo limite. Por favor, tente novamente com outra data."
+            },
+            "payment": {
+                "rejected": "Seu pagamento foi recusado, por favor tente com outro cartão."
+            },
+            "cancel": "La reserva no puede ser cancelada.",
+            "not": {
+                "exist" : "Não há nenhuma reserva com esse código."
+            }
+        },
+        "cancel": {
+            "error": {
+                "not": {
+                    "adults": "A reserva deve ter pelo menos um adulto"
+                }
+            },
+            "button": {
+                "total": "Cancelamento total",
+                "partial": "Cancelamento parcial"
+            },
+            "title-select": "Deseja concluir ou cancelar parcial?",
+            "title": "Selecione o número de passageiros que participará da reserva!",
+            "name-client": "Nome do cliente",
+            "booking-number": "N° reserva",
+            "activity-date": "Atividade de data",
+            "input-cancel": "Será cancelado"    
+        },
+        "success": {
+        	"cancel": "A reserva não pode ser cancelada."
+        },
+        "status" : {
+            "CONFIRMED" : "Confirmada",
+            "PENDING" : "Pendente",
+            "CANCELLED" : "Cancelada",
+            "REJECTED" : "Rejeitada"
+        },
+        "details" : {
+            "thanks" : {
+                "title" : "Obrigada, sua reserva está sendo processada",
+                "next-minutes" : "Em breve você receberá um email com a cofirmação."
+            },
+            "booking-number" : "Número da reserva __bookingNumber__",
+            "adults" : "__count__ Adulto",
+            "adults_plural" : "__count__ Adultos",
+            "minors" : "__count__ Menor",
+            "minors_plural" : "__count__ Menores",
+            "adults-price" : "Preço para adultos",
+            "minors-price" : "Preço para menores",
+            "booking-payment" : "Pagamento por reserva",
+            "open-balance" : "Saldo a pagar",
+            "discount" : "Descuento",
+            "discount-amount": "Descuento total",
+            "print" : "Imprimir voucher",
+            "booked" : "Reservada",
+            "important" : {
+                "title" : "Importante",
+                "payment" : {
+                    "title" : "Pago",
+                    "mercado-pago" : "O Número do pagamento no MercadoPago é: <strong>__paymentExternalId__</strong>. Esta compra figura no resumo do seu cartão como <b>MercadoPago</b>.",
+                    "disclaimer" : "Os dados do seu cartão de crédito serão usados somente para esta transação."
+                },
+                "changes" : {
+                    "title" : "Modificação de datas ou cancelamentos",
+                    "body" : "Por favor, lembre-se de que para modificar ou cancelar sua reserva deverá entrar em contato direto com o prestador."
+                }
+            }
+        }
+    },
+    "profile" : {
+        "title" : "Perfil de usuario",
+        "update-your-info" : "Atualize seus datos",
+        "required-info" : "Os dados seguintes são necessários para confirmar as reservas realizadas.",
+        "processing" : "Por favor, aguarde um momento...",
+        "error" : "Ocorreu um erro ao tentar guardar seu perfil, por favor, tente novamente.",
+        "success" : "Seu perfil foi corretamente guardado."
+    },
+    "listing" : {
+        "title" : "O que fazer",
+        "subtitle" : "Encontre as melhores atividades, passeios e experiências",
+        "bookings" : "__count__ reservada",
+        "bookings_plural" : "__count__ reservadas",
+        "bookings-last-days" : "__count__ reserva",
+        "bookings-last-days_plural" : "__count__ reservas",
+        "activities-label" : "Temos <span class='highlight'>__count__ atividade</span> para você",
+        "activities-label_plural" : "Temos <span class='highlight'>__count__ atividades</span> para você",
+        "online-booking-payment" : "Reserve o seu lugar pagando somente __percentage__% online.",
+        "empty" : "Não foram encontrados resultados.",
+        "filters" : {
+            "applied" : "Filtros aplicados",
+            "locations" : "Lugares",
+            "categories" : "Categorias",
+            "price" : "Preço",
+            "search" : "Você está procurando"
+        },
+        "go-back" : "Volver"
+    },
+    "pagination" : {
+        "next" : "Seguinte",
+        "previous" : "Anterior"
+    },
+    "favorites" : {
+        "title" : "Seus favoritos",
+        "empty" : "Você ainda não possui favoritos!"
+    },
+    "price" : {
+        "from" : "Desde",
+        "to" : "Até"
+    },
+    "apply" : "Aplicar",
+    "free" : "Grátis",
+    "EASY" : "Baixa",
+    "MEDIUM" : "Média",
+    "HARD" : "Alta",
+    "NEW" : "Novo",
+    "NEW_male" : "Novo",
+    "NEW_female" : "Nova",
+    "500" : "Ocorreu um erro inesperado, tente novamente.",
+    "301" : "A data de vencimento do cartão é inválida.",
+    "324" : "O número de documento é inválido para o tipo de documento escolhido.",
+    "E301" : "O número do cartão está incorreto.",
+    "E302" : "O código de segurança está incorreto.",
+    "3028" : "O tipo de cartão selecionado é inválido.",
+    "325" : "O mês de vencimiento está incorreto.",
+    "326" : "O ano de vencimento está incorreto.",
+    "cc_rejected_insufficient_amount" : "O cartão de crédito fornecido não possui limite suficiente para processar o pagamento.",
+    "cc_rejected_bad_filled_card_number" : "O número do cartão de crédito está incorreto, revise por favor.",
+    "cc_rejected_bad_filled_date" : "Por favor, revise a data de vencimento.",
+    "cc_rejected_bad_filled_other" : "Encontramos um erro, por favor, revise os dados.",
+    "cc_rejected_bad_filled_security_code" : "O código de segurança fornecido está incorreto.",
+    "cc_rejected_blacklist" : "O cartão não está habilitado para processar o pagamento.",
+    "cc_rejected_call_for_authorize" : "Você deve autorizar o emissor do cartão para aceitar as transações do MercadoPago.",
+    "cc_rejected_card_disabled" : "O cartão está desativado. Por favor, entre em contato com o emissor do cartão de crédito para ativá-lo.",
+    "cc_rejected_card_error" : "O pagamento não pôde ser processado.",
+    "cc_rejected_duplicated_payment" : "Você já fez um pagamento neste valor. Se precisar pagar novamente, use outro cartão ou forma de pagamento.",
+    "cc_rejected_high_risk" : "Seu pagamento foi rejeitado.",
+    "cc_rejected_max_attempts" : "Você chegou ao número máximo de tentativas permitidas. Por favor, escolha outro cartão para poder realizar o pagamento.",
+    "cc_rejected_other_reason" : "O emissor do cartão não processou o pagamento.",
+    "january" : "Janeiro",
+    "february" : "Fevereiro",
+    "march" : "Março",
+    "april" : "Abril",
+    "may" : "Maio",
+    "june" : "Junho",
+    "july" : "Julho",
+    "august" : "Agosto",
+    "september" : "Setembro",
+    "october" : "Outubro",
+    "november" : "Novembro",
+    "december" : "Dezembro",
+    "please-moment" : "Aguarde um instante, por favor...",
+    "ARS" : "ARS ",
+    "ars" : "ARS ",
+    "MALE": "Masculino",
+    "FEMALE": "Feminino",
+    "SUPER_FLEXIBLE": "Super Flexível",
+    "FLEXIBLE": "Flexível",
+    "MODERATE": "Moderada",
+    "STRICT": "Estrita", 
+    "SUPER_STRICT": "Super estrita",
+    "success": "Sucesso",
+    "error:": "Erro",
+    "save" : "Salvar",
+    "about-us" : {
+        "title" : "Quem somos?"
+    },
+    "how-it-works" : {
+        "title" : "Como funciona?"
+    },
+    "faq" : {
+        "title" : "Preguntas frequentes de usuário - FAQ"
+    },
+    "how-to-publish" : {
+        "title" : "Quero publicar"
+    },
+    "provider" : {
+        "title" : "Iniciar sesion"
+    },
+    "plan": {
+        "title": "Planeie a sua viagem"
+    },
+    "travel-app": {
+        "title": "App Travel Buenos Aires: Android y IOS"
+    },
+    "help": {
+        "title" : "Ajuda"
+    },
+    "terms-and-conditions" : {
+        "title" : "Termos e condições"
+    },
+    "loading": "Carregando...",
+    "search-form" : {
+        "legend" : "O que você está procurando?",
+        "search" : "Procurar",
+        "errors" : {
+            "search-input" : {
+                "minlength" : "Complete ao menos 3 caracteres.",
+                "maxlength" : "Não é possível usar mais de 80 caracteres."
+            }
+        }
+    },
+    "INSTANT_CONFIRMATION": "Confirmação instantânea",
+    "ON_REQUEST": "Confirmação manual",
+    "ON_CAPACITY_CONFIRMATION": "Confirmação por ocupação",
+    "MINUTES": "Minutos",
+    "HOURS": "Horas",
+    "DAYS": "Dias",
+    "WEEKS": "Semanas",
+    "MONTHS": "Meses",
+    "lang" : {
+        "language" : "Idioma",
+        "es" : "Español",
+        "en" : "English",
+        "pt" : "Português"
+    },
+    "promocode": {
+        "error": {
+            "discount": {
+                "discountCode": {
+                    "invalidCode": "Código de cupom inválido."
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+.provider-occupation-editable {
+  overflow: hidden;
+  font-size: 12px;
+
+  & + .provider-occupation-editable {
+    margin-top: 20px;
+  }
+
+  .occupation-title {
+    text-align: left;
+
+    .break(sm, {
+      text-align: center;
+    });
+
+    .break(md, {
+      text-align: left;
+    });
+
+    a {
+      color: @blue-2;
+    }
+  }
+
+  .occupation-option {
+    text-align: left;
+    font-style: italic;
+
+    .break(sm, {
+      text-align: center;
+    });
+
+    .break(md, {
+      text-align: left;
+    });
+
+    a {
+      color: @blue-2;
+    }
+  }
+
+  .occupation-price {
+    display: block;
+    text-align: right;
+    .font-medium;
+
+    .break(sm, {
+      text-align: center;
+    });
+
+    .break(md, {
+      float: left;
+      width: 50%;
+      text-align: left;
+      font-size: 14px;
+    });
+  }
+
+  .occupation-places {
+    display: block;
+    text-align: right;
+    .font-medium;
+
+    .break(sm, {
+      text-align: center;
+    });
+
+    .break(md, {
+      float: left;
+      width: 50%;
+      text-align: right;
+      font-size: 14px;
+    });
+  }
+}

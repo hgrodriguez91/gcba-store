@@ -1,0 +1,32 @@
+<li>
+    <a class="activity-collection-item activity-collection-item-normal" href="{{baseURL}}{{activityURL}}/{{item.code}}">
+        <div class="item-media-wrapper">
+            <div>
+                {{#if item.old_price}}
+	                <i class="icon icon-ribbon"></i>
+                {{/if}}
+                <img src="{{item.image}}" alt="{{item.title}}">
+            </div>
+        </div>
+
+        <div class="item-body">
+            <div class="item-info">
+<!--                 <button data-item-id="{{item.code}}" class="btn btn-favorite white"><i class="fa {{#if item.favorite}}fa-heart{{else}}fa-heart-o{{/if}}"></i></button> -->
+                <!--<div class="item-category">{{item.category}}<span class="item-place"> | {{item.location}}</span></div>-->
+                
+                <!--<div class="item-description"><h6>{{item.description}}</h6></div>-->
+                <div class="item-footer">
+                    <div class="item-title"><h4>{{item.title}}</h4></div>
+                    <div class="item-place-top"><i class="glyphicon glyphicon-map-marker"></i> {{item.location}}</div>
+                    <!--<div class="item-pricing-carrie">-->
+                        <div class="item-pricing">
+                            {{discountPrice item.old_price}}
+                            {{activityPrice item.price maximumFractionDigits="0"}}
+                        </div>
+                        <!--<img src="{{baseURL}}assets/img/icons/carrito.png" alt="Carrito"/>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </a>
+</li>

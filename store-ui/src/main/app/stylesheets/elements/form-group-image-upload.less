@@ -1,0 +1,184 @@
+.form-group-image-upload {
+  overflow: hidden;
+  margin-left: -10px;
+
+  .break(md, {
+    margin-left: -8px;
+  });
+
+  .form-image-upload-control {
+    float: left;
+    width: 155px;
+    height: 155px;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    border: transparent solid 1px;
+    cursor: pointer;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .break(sm, {
+      width: 167px;
+      height: 167px;
+    });
+
+    .break(md, {
+      width: 145px;
+      height: 145px;
+      margin-left: 8px;
+      margin-bottom: 8px;
+    });
+
+    .backdrop {
+      background: rgba(0,0,0,.55);
+      position: absolute;
+      top: 125px;
+      height: 185px;
+      left: 0;
+      right: 0;
+      color: #ffffff;
+      text-align: center;
+      .transition(all 0.2s linear);
+
+      .break(sm, {
+        top: 137px;
+        height: 197px;
+      });
+
+      .break(md, {
+        top: 115px;
+        height: 175px;
+      });
+
+      .arrows {
+        height: 30px;
+        line-height: 30px;
+        font-size: 18px;
+      }
+
+      .actions {
+        width: 155px;
+        height: 155px;
+        padding: 10px;
+
+        .break(sm, {
+          width: 167px;
+          height: 167px;
+        });
+
+        .break(md, {
+          width: 145px;
+          height: 145px;
+        });
+
+        .primary {
+          border: #ffffff solid 1px;
+          height: 104px;
+          display: table;
+          width: 100%;
+
+          .break(sm, {
+            height: 116px;
+          });
+
+          .break(md, {
+            height: 94px;
+          });
+
+          label {
+            color: inherit;
+            cursor: pointer;
+            display: table-cell;
+            vertical-align: middle;
+          }
+
+          .status {
+            .checked {
+              display: none;
+
+              .icon {
+                color: #01c8b0;
+                display: block;
+                font-size: 18px;
+                line-height: 20px;
+              }
+
+              .main-icon {
+                color: #01c8b0;
+                font-size: 18px;
+                position: absolute;
+                top: 0;
+                right: 10px;
+              }
+            }
+
+            .unchecked {
+              display: block;
+            }
+          }
+
+          input {
+            display: none;
+
+            &:checked {
+              &+.status {
+                .checked {
+                  display: block;
+                }
+
+                .unchecked {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+
+        .delete {
+          border: #ffffff solid 1px;
+          border-top: 0;
+          height: 30px;
+          line-height: 30px;
+
+          a {
+            color: inherit;
+          }
+
+          .icon {
+            .ico-close();
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    &:hover, &:focus {
+      .backdrop {
+        top: -30px;
+      }
+    }
+  }
+
+  .form-control-file-placeholder {
+    float: left;
+    width: 155px;
+    height: 155px;
+    overflow: hidden;
+    margin-left: 10px;
+
+    .break(sm, {
+      width: 167px;
+      height: 167px;
+    });
+
+    .break(md, {
+      width: 145px;
+      height: 145px;
+      margin-left: 8px;
+      margin-bottom: 8px;
+    });
+  }
+}

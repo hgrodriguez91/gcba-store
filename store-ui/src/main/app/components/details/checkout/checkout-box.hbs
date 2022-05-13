@@ -1,0 +1,68 @@
+<div class="activity-checkout-box">
+    <form id="booking-form" action="#" method="post">
+        <h4>{{t 'activity.checkout.do-it-now'}}</h4>
+        {{#unless externalLink}}
+            <div id="activity-option-selector-container"></div>
+            <hr>
+            <div class="col-sm-12">
+                <div class="calendar-label">
+                <h4>{{t 'activity.checkout.title-calendar'}}</h4>
+                </div>
+            </div>
+            
+            <div id="booking-datepicker-container"></div>
+            <div id="booking-time-selector-container"></div>
+            <!---->
+            <div id="booking-rates"></div>
+             <!---->
+
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="form-group checkbox">
+                        <label class="control-label promo-web">
+                            <span class="form-control-checkbox"><input type="checkbox" name="accept" id="promocodeCheck" value="false"><i class="fa"></i></span>
+                        </label>
+                        <div class="promo-mobile">
+                            <ul style="padding: 0;">
+                            <li style="display: inline-block"><label class="control-label">
+                                   <span class="form-control-checkbox"><input type="checkbox" name="accept" id="promocodeCheckMobile" value="false"><i class="fa"></i></span>
+                                </label>
+                            </li>
+                            <li style="display: inline-block">
+                                 <div class="promo-code-label">
+                                    <span>{{t 'activity.checkout.promocode-label'}}</span>
+                                </div>
+                            </li>
+                        </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-10 promo-code-col promo-web">
+                    <div class="promo-code-label">
+                        <span>{{t 'activity.checkout.promocode-label'}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row hideContainer" id="pomocodeContainer">
+                <div id="promocode-container"></div>
+            </div>
+        {{/unless}}
+        <div class="final-price">
+            {{#gt marketingPrice.amount 0}}
+                <div>
+                    <span>{{t 'activity.checkout.price-per-person-start-at'}}</span>
+                </div>
+            {{/gt}}
+            <div class="price">
+                {{activityPrice marketingPrice localeString="es-AR" maximumFractionDigits="0"}}
+            </div>
+        </div>
+        <div class="form-submit">
+            <button type="submit" id="check-availability" class="btn btn-primary btn-lg btn-block">
+                <!--<span class="btn-icon"><i class="fa fa-angle-right"></i>-->
+                </span>{{#if available}}{{t 'activity.details.book-now'}}{{else if externalLink}}{{t 'activity.details.book-here'}}{{else}}{{t 'activity.details.coming-soon'}}{{/if}}
+            </button>
+        </div>
+    </form>
+</div>

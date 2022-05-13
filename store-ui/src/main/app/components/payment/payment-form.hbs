@@ -1,0 +1,13 @@
+<form id="payment-form" action="#" method="post">
+    <div id="personal-information-container" class="personal-information"></div>
+    <hr>
+    <div id="creditcard-information-container" class="creditcard-information"></div>
+    <div class="form-group checkbox terms-of-agreement">
+        <label class="control-label">
+            <span class="form-control-checkbox"><input type="checkbox" name="accept"><i class="fa"></i></span> {{t 'payment.terms-and-conditions-1'}} <a id="show-termsAndCondition" href="#">{{t 'payment.terms-and-conditions-2'}}</a>
+        </label>
+    </div>
+    <div class="form-submit">
+        <button type="submit" id="submit-payment-form" class="btn btn-primary btn-lg btn-icon-right btn-sm-block btn-xxs-block btn-submit"><span class="btn-icon"><i class="fa fa-angle-right"></i></span>{{t 'payment.confirm-booking'}}</button>
+    </div>
+</form>

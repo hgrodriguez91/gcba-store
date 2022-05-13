@@ -1,0 +1,13 @@
+<section class="red-cellophane">
+    <header>
+        <div class="category">{{category}}</div>
+        <h4>{{title}}</h4>
+    </header>
+    <p class="location"><i class="glyphicon glyphicon-map-marker"></i>{{location}}</p>
+    {{#activityShowBookingPercentage payment_percentage_online}}
+    <p class="booking-percentage">{{t 'home.online-booking-percentage' percentage=payment_percentage_online}}</p>
+    {{/activityShowBookingPercentage}}
+    <footer>
+        {{activityPrice price maximumFractionDigits="0"}}
+    </footer>
+</section>

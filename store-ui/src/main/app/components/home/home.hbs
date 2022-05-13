@@ -1,0 +1,188 @@
+<div class="home-slider">
+    <div id="home-slider-container" class="slide-header">
+       
+        {{#any collections}}
+         <h1>{{t 'home.slider.title'}}</h1>
+            <ul>
+                <li class="home-slide-collection image-as-background">
+                    <img src="{{baseImageURL}}/home-slide/slide-default.jpg" alt=""/>
+                    <!--<div class="slide-header-content">
+                        <div class="container" style="padding-bottom: 180px;">
+                            <h1>{{t 'home.slider.title'}}</h1>
+                        </div>
+                    </div>-->
+                    <div class="slide-header-content">
+                        <div class="container">
+                            <h1>{{t 'home.slider.title'}}</h1>
+                            <!--<h3 style="margin: 0;">{{t 'home.slider.life-is-outside'}}</h3>-->
+                            <div class="discovery-btn">
+                                <a href="{{baseURL}}{{activitiesURL}}" class="btn btn-lg btn-primary">{{t 'home.slider.discovery'}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{#each collections}}
+                    <li class="home-slide-collection">
+                        <div class="image-as-background">
+                            <img src="{{image}}" alt="{{name}}" title="{{description}}">
+                             <!--<div class="slide-header-content">
+                                <div class="container" style="padding-bottom: 180px;">
+                                    <h1>{{t 'home.slider.title'}}</h1>
+                                </div>
+                            </div>-->
+                        </div>
+                        {{> homeSlideCollectionInfo this}}
+                    </li>
+                {{/each}}
+            </ul>
+        {{/any}}
+        {{#empty collections}}
+            <ul>
+                <li class="image-as-background"><img src="{{baseImageURL}}/home-slide/slide-default.jpg" alt=""/></li>
+            </ul>
+            <div class="slide-header-content">
+                <div class="container">
+                    <h1>{{t 'home.slider.life-is-outside'}}</h1>
+                    <div class="discovery-btn">
+                        <a href="{{baseURL}}{{../activitiesURL}}" class="btn btn-lg btn-primary">{{t 'home.slider.discovery'}}</a>
+                    </div>
+                </div>
+            </div>
+        {{/empty}}
+        <span class="arrow prev"></span>
+        <span class="arrow next"></span>
+    </div>
+    <!--<div class="home-search-bar">
+        <div class="container">
+            <div id="search-form"></div>
+        </div>
+    </div>-->
+</div>
+
+<section class="home-categories">
+    <div class="container">
+        <!--<div class="box-title">
+            <h3>{{t 'home.categories-title'}}</h3>
+        </div>-->
+        <section id="home-categories-slider">
+            <ul class="list-unstyled list-inline home-categories-list">
+                {{#each top_categories}}
+                <li><a class="" href="{{../baseURL}}{{../activitiesURL}}/{{lowercase public_code}}"><img src="{{#if thumbnail}}{{thumbnail}}{{else}}{{../../baseImageURL}}/categorie.png{{/if}}" /><b>{{name}}</b></a></li>
+                {{/each}}
+            </ul>
+        </section>
+        <hr style="height: 1px;background: black">
+    </div>
+</section>
+{{!--
+<div class="bg-box bg-box-red hide">
+    <div class="home-attributes">
+        <div class="slider">
+            <div class="container">
+                <div class="slider-scroll">
+                    <ul>
+                        <li>
+                            <span class="attr-icon"><img src="{{baseURL}}assets/img/icons/home-attr-01.png" alt="Reserva online"/></span>
+                            <span class="attr-name">RESERVÁ ONLINE</span>
+                        </li>
+                        <li>
+                            <span class="attr-icon"><img src="{{baseURL}}assets/img/icons/home-attr-02.png" alt="Obtene 10% OFF"/></span>
+                            <span class="attr-name">OBTENÉ 10% OFF</span>
+                        </li>
+                        <li>
+                        	<span class="attr-icon"><img src="{{baseURL}}assets/img/icons/home-attr-03.png" alt="Comentarios y Reviews"/></span>
+                            <span class="attr-name attr-name-xs">COMENTARIOS Y REVIEWS</span>
+                        </li>
+                        <li>
+                            <span class="attr-icon"><img src="{{baseURL}}assets/img/icons/home-attr-04.png" alt="Expertos y Recomendaciones"/></span>
+                            <span class="attr-name attr-name-xs">EXPERTOS Y RECOMENDACIONES</span>
+                        </li>
+                        <li>
+                            <span class="attr-icon"><img src="{{baseURL}}assets/img/icons/home-attr-05.png" alt="Cambio sin cargo"/></span>
+                            <span class="attr-name">CAMBIO SIN CARGO</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navigation">
+                <a href="#" class="navigation-btn prev"><i class="fa fa-angle-left"></i></a>
+                <a href="#" class="navigation-btn next"><i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+--}}
+{{#any recommendations}}
+    <section class="recommendations">
+        <div class="container">
+            <div class="box-title-recomendation">
+                <h2>{{t 'home.recommended-title'}}</h2>
+            </div>
+            <ul id="recommended-activities" class="list-unstyled activity-collection activity-collection-grid">
+                {{{collectionOf 'homeActivityRecommendedView' recommendations}}}
+            </ul>
+        </div>
+    </section>
+{{/any}}
+
+<section class="popular-activities">
+    <div class="container">
+        <hr style="height: 1px;background: black; margin:0;">
+        <div class="box-title-popular">
+            <h2>{{t 'home.most-popular-title'}}</h2>
+        </div>
+        <ul id="popular-activities" class="list-unstyled activity-collection activity-collection-grid">
+            {{{collectionOf 'homeActivityView' popular_activities}}}
+        </ul>
+    </div>
+</section>
+
+<!--{{#any random_activities}}
+    <section class="discover-activities">
+        <div id="discover-activities-slider">
+            <ul>
+                {{#each random_activities}}
+                    <li>
+                        <a class="image-as-background" href="{{baseURL}}{{../activityURL}}/{{code}}">
+                            <img src="{{image}}" alt="{{title}}" title="{{description}}"/>
+                            {{> activitySlideInfoRedCellophane this}}
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+            <span class="arrow prev"></span>
+            <span class="arrow next"></span>
+        </div>
+    </section>
+{{/any}}-->
+
+<section class="home-top-locations">
+    <div class="container">
+        <div class="box-title-locations">
+            <h2><i class="glyphicon glyphicon-map-marker"></i>{{t 'home.most-popular-locations-title'}}</h2>
+        </div>
+        <section>
+            <ul class="list-unstyled list-inline">
+                {{#each top_locations}}
+                <li><a class="btn btn-link btn-pill btn-pill-lg" href="{{../baseURL}}{{../activitiesURL}}/{{#if full_public_code}}{{full_public_code}}{{else}}{{public_code}}{{/if}}"><i class="glyphicon glyphicon-map-marker"></i>{{name}}</a></li>
+                {{/each}}
+            </ul>
+        </section>
+    </div>
+</section>
+
+<!--<section class="social-networks">
+    
+    <div class="container">
+        <hr style="height: 1px;background: black">
+        <div class="row-center">
+            <a class="" href="http://www.youtube.com/travelbuenosaires" target="_blank"><img src="{{baseURL}}assets/img/icons/youtube.png" alt="Youtube"/></a>
+            <a class="" href="https://www.instagram.com/travelbuenosaires" target="_blank"><img src="{{baseURL}}assets/img/icons/instagram.png" alt="Imstagram"/></a>
+            <a class="" href="https://www.facebook.com/travelbuenosaires" target="_blank"><img src="{{baseURL}}assets/img/icons/facebook.png" alt="Facebook"/></a>
+            <a class="" href="https://www.twitter.com/travelbaires" target="_blank"><img src="{{baseURL}}assets/img/icons/twitter.png" alt="Twitter"/></a>
+            <a class="" href="https://www.flickr.com/photos/travelbuenosaires/" target="_blank"><img src="{{baseURL}}assets/img/icons/flickr.png" alt="Flickr" class="img-flicks"/></a>
+        </div>
+        
+    </div>
+     
+</section>-->

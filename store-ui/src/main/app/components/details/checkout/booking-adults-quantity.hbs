@@ -1,0 +1,21 @@
+<div class="form-group has-feedback">
+    <select name="adultsQuantity" required class="form-control select2-control" placeholder="{{t 'activity.checkout.adults-label'}}">
+        {{#select adultsQuantity}}
+            <option value="">{{#if isPhone}}{{t 'activity.checkout.adults-label'}}{{/if}}</option>
+            {{#each values}}
+                <option value="{{this}}">{{this}}</option>
+            {{else}}
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            {{/each}}
+        {{/select}}
+    </select>
+<!-- 	<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true" style="display: none;"></span> -->
+</div>

@@ -1,0 +1,54 @@
+.h1 {
+  font-family: @font-family-h1;
+  color: #5c5c5c;
+  text-transform: none;
+  margin-bottom: 15px;
+
+  .fa-check-circle {
+    color: @green-zelzet;
+  }
+
+  .break(xxs only xs only, {
+    font-size: 17px;
+  });
+}
+
+h1 {
+  .h1;
+}
+
+h2, .h2 {
+  font-family: @font-family-h2;
+  text-transform: uppercase;
+  font-size: @font-size-h2;
+  .break(sm, {
+    font-size: @font-size-h2-sm;
+  });
+}
+
+h3, .h3 {
+  font-family: @font-family-h3;
+}
+
+h4, .h4 {
+  font-family: @font-family-h4;
+}
+
+h5, .h5 {
+  font-family: @font-family-h5;
+}
+
+h6, .h6 {
+  font-family: @font-family-h6;
+}
+
+.title-1st {}
+.title-2nd {}
+.title-3rd {
+  .h1;
+}
+.header-lang {
+  text-transform: uppercase;
+  .font-bold-raleway-semi;
+  color:#000000;
+}

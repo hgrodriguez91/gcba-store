@@ -1,0 +1,12 @@
+all:
+  - test
+  - clean
+  - handlebars
+  - styles
+  - concat
+  - copy:production
+styles:
+  - less
+  - postcss:dist
+test:
+  - jsvalidate

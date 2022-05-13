@@ -1,0 +1,415 @@
+.activity-collection-list {
+  a {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  > li {
+    border: 1px solid @grey-10;
+    margin-bottom: (@grid-gutter-width / 2);
+  }
+
+  .activity-collection-item {
+    position: relative;
+/*     box-shadow: 2px 2px 4px 0 #bbb; */
+/*     border: 1px solid @grey-10; */
+    display: block;
+    padding-left: 0;
+    height: 100%;
+    width: 100%;
+    .break(xs, {
+      padding-left: @activities-list-item-media-width-xs;
+      height: @activities-list-item-height-xs;
+    });
+    .break(md, {
+      padding-left: @activities-list-item-media-width-md;
+      height: @activities-list-item-height-md;
+    });
+    .break(lg, {
+      padding-left: @activities-list-item-media-width-lg;
+      height: @activities-list-item-height-lg;
+    });
+
+    &:hover {
+      cursor: pointer;
+      .item-media-wrapper {
+        > div {
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .bookmark-flag {
+      top: 10px;
+    }
+
+    .item-media-wrapper {
+      display: inline-block;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      padding-left: 0;
+      background: #333 url("../img/footer-bg.png") repeat scroll center 0;
+      overflow: hidden;
+
+        .icon-ribbon {
+          position: absolute;
+          background-image: url(../img/ribbon_discount.png);
+          background-repeat: no-repeat;
+          height: 101px;
+          width: 101px;
+          top: -6px;
+          left: -6px;
+        }
+
+        .break(xs, {
+          width: @activities-list-item-media-width-xs;
+          position: absolute;
+          top: 0;
+          left: 0;
+        });
+      .break(md, { width: @activities-list-item-media-width-md; });
+      .break(lg, { width: @activities-list-item-media-width-lg; });
+
+      > div {
+        display: block;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        .break(xs, { width: @activities-list-item-media-width-xs; });
+        .break(md, { width: @activities-list-item-media-width-md; });
+        .break(lg, { width: @activities-list-item-media-width-lg; });
+
+        &:before {
+          opacity: 0;
+          .transition(all 0.2s linear);
+          content: " ";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          filter: blur(6px);
+          .break(sm, {
+            .glossy(#fff, 140px, 190px);
+          });
+          .break(md, {
+            .glossy(#fff, 200px, 250px);
+          });
+        }
+
+      }
+
+      img {
+          .transition(all 0.2s linear);
+          width: 100%;
+          .break(xs, {
+            width: auto;
+            height: 100%;
+          });
+      }
+
+      .item-extra-data {
+        .font-medium;
+        height: 18px;
+        font-size: 0.8em;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 32px;
+        line-height: 32px;
+        padding-left: 10px;
+
+        .break(md, {
+          font-size: 0.9em;
+        });
+
+        .bookings-quantity {
+          font-size: 1.2em;
+          .break(md, {
+            font-size: 1.1em;
+          });
+          i {
+            font-size: 1.3em;
+            .break(sm only, {
+              font-size: 1.1em;
+              vertical-align: text-top;
+            });
+            .break(md, {
+              font-size: 1.2em;
+            });
+            vertical-align: text-bottom;
+            padding-right: 3px;
+          }
+          .full {
+            display: none;
+            .break(xxs only, {
+              display: inherit;
+            });
+            .break(md, {
+              display: inherit;
+            });
+          }
+          .synthesized {
+            .break(xxs only, {
+              display: none;
+            });
+            .break(md, {
+              display: none;
+            });
+          }
+        }
+      }
+    }
+
+    .item-body {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100%; 
+      .break(xs, {
+        vertical-align: top;
+        padding-bottom: 30px;
+      });
+      .break(sm, {
+        padding-bottom: 30px;
+      });
+
+      .item-recommended-label {
+        display: none;
+      }
+
+      .item-place-top {
+        display: none;
+      }
+
+      .item-info {
+        position: relative;
+        display: block;
+        vertical-align: top;
+        padding-left: @grid-gutter-width / 2;
+        padding-right: @grid-gutter-width;
+        padding-top: 5px;
+        padding-bottom: 0; //25px
+
+        .break(sm, {
+          padding-bottom: 28px;
+        });
+      }
+
+      .item-category {
+        font-size: 1.1em;
+        height: 30px;
+        overflow: hidden;
+        color: @black;
+        line-height: 2;
+        padding-right: 25px;
+
+        .item-place {
+          .font-bold-raleway;
+        }
+
+        .new-item-label {
+          background: #dc493d none repeat scroll 0 0;
+          color: white;
+          font-family: gotham_boldregular;
+          font-size: 0.8em;
+          margin-right: 10px;
+          padding: 5px 8px;
+          text-transform: uppercase;
+
+          i {
+            padding-right: 5px;
+          }
+        }
+      }
+  
+      .item-title {
+        padding-right: 25px;
+        font-size: 1.2em;
+        color: @black;
+        margin: 0 0 5px;
+        height: 33px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        
+        .break(sm, { font-size: 1.8em; height: 35px;});
+        .break(lg, { font-size: 2.1em; margin-bottom: 5px; height: 50px;});
+  
+        h4 {
+          margin: 0;
+          .font-bold-raleway-extra;;
+          font-size: inherit;
+        }
+      }
+
+      .item-booking-percentage {
+        font-size: 0.9em;
+        line-height: 1;
+        .font-medium;
+
+        .booking-percentage-legend {
+          color: @red-2-zelzet;
+          margin: 0 0 3px 0;
+
+          .booking-percentage {
+            .font-bold;
+            padding-right: 5px;
+          }
+        }
+      }
+
+      .stars-block {
+        min-height: 25px;
+      }
+
+      .item-description {
+        overflow: hidden;
+        position: relative;
+        font-size: 10px;
+        height: 56px;
+        width: 100%;
+        display: inline-block;
+        color: @black;
+        .font-regular-raleway;
+        .break(xs, {
+          height: 32px;
+        });
+        .break(md, {
+          font-size: 13px;
+          height: 75px;
+        });
+        .break(lg, {
+          font-size: 13px;
+          height: 112px;
+        });
+
+        p {
+          color: @black;
+          margin: 0;
+          height: 100%;
+          width: 100%;
+          text-align: justify;
+          padding-right: 10px;
+        }
+
+      }
+
+      .item-footer {
+        display: block;
+        width: 100%;
+        position: relative;
+        height: 30px;
+        color: @grey-5;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        padding: 5px 10px 5px;
+
+        .break(xs, {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding-left: 10px;
+        });
+
+        .break(md, {
+          padding-top: 0;
+          height: 35px;
+        });
+
+        .item-owner {
+          font-size: 0.8em;
+          line-height:1.4em;
+          .font-medium;
+          color: @grey-3;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          text-transform: uppercase;
+          overflow: hidden;
+          padding-right: 10px;
+          padding-bottom: 3px;
+          margin-left: -2px;
+
+          .break(sm, {
+            font-size: 0.7em;
+            padding-bottom: 0;
+          });
+          .break(md, {
+            font-size: 0.8em;
+            padding-bottom: 3px;
+          });
+
+          i {
+            font-size: 1.3em;
+            line-height: 1.3em;
+            vertical-align: bottom;
+            padding-right: 5px;
+            background: url('../img/icons/medal.png') no-repeat center center / cover;
+            height: 1.3em;
+            width: 1.3em;
+            display: inline-block;
+          }
+        }
+
+        .item-pricing {
+          text-align: right;
+          .item-standard-price {
+            color: @item-standard-price-color;
+            font-size: 16px;
+            text-decoration: line-through;
+            line-height: 18px;
+            .font-bold-raleway-extra;
+          }
+          .item-price {
+            font-size: 1.4em;
+            line-height: 1.2em;
+            .font-bold-raleway-extra;
+            color: @grey-5;
+            .break(md, { font-size: 1.4em; line-height: 1.2em; });
+            .break(lg, { font-size: 1.6em; line-height: 1.4em; });
+            &.free {
+              color: @red-2-zelzet;
+              text-transform: uppercase;
+            }
+          }
+
+          .item-discount-price {
+          	color: lightgray;
+            text-decoration: line-through;
+          }
+
+          .item-price-help {
+            display: none;
+          }
+        }
+      }
+      .item-rating {
+        .rating {
+          font-size: 15px;
+          .break(md, { font-size: 20px; });
+          .star:before {
+            padding-right: 2px;
+          }
+        }
+      }
+      .btn-favorite {
+        position: absolute;
+        right: 9px;
+        top: 15px;
+      }
+    }
+  }
+}

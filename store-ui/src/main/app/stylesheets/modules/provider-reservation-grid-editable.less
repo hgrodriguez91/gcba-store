@@ -1,0 +1,131 @@
+.provider-reservation-grid-editable {
+  border: #646d7f solid 2px;
+  margin-bottom: @grid-gutter-width * .75;
+
+  .break(sm, {
+    border-width: 1px;
+  });
+
+  .item-heading {
+    border-bottom: #646d7f solid 1px;
+
+    .media-object {
+      width: 75px;
+      height: 75px;
+      display: block;
+    }
+
+    .media-body {
+      font-size: 12px;
+      vertical-align: middle;
+
+      .break(sm, {
+        font-size: 13px;
+      });
+
+      .break(md, {
+        font-size: 14px;
+      });
+    }
+
+    .media-heading {
+      color: @blue-2;
+      text-transform: uppercase;
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: normal;
+      .font-bold;
+
+      .break(sm, {
+        font-size: 16px;
+      });
+
+      .break(md, {
+        font-size: 18px;
+      });
+    }
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .item-body {
+    color: #888e99;
+    font-size: 12px;
+
+    .break(md, {
+      font-size: 14px;
+    });
+
+    .personal-information {
+      padding: (@grid-gutter-width / 2) (@grid-gutter-width * .75);
+      border-bottom: #646d7f solid 1px;
+
+      .break(md, {
+        border-bottom: 0;
+      });
+    }
+
+    .date-information {
+      border-bottom: #646d7f solid 1px;
+      padding: (@grid-gutter-width / 2) (@grid-gutter-width * .75);
+
+      .break(sm, {
+        border-bottom: 0;
+        padding-right: 0;
+      });
+
+      .break(md, {
+        border-left: #646d7f solid 1px;
+      });
+
+      .datetime {
+        text-align: right;
+
+        .break(sm, {
+          text-align: left;
+        });
+      }
+    }
+
+    .billing-information {
+      padding: (@grid-gutter-width / 2) (@grid-gutter-width * .75);
+
+      .break(sm, {
+        border-left: #646d7f solid 1px;
+        margin-left: (@grid-gutter-width * -.75);
+      });
+
+      .price {
+        text-align: right;
+        .font-bold;
+      }
+    }
+
+    .total-information {
+      display: table;
+      width: 100%;
+      min-height: 58px;
+      border-bottom: #646d7f solid 1px;
+
+      .break(sm, {
+        border-bottom: 0;
+      });
+
+      .break(md, {
+        min-height: 64px;
+      });
+
+      .counter {
+        padding: (@grid-gutter-width / 2) (@grid-gutter-width * .75);
+        display: table-cell;
+        vertical-align: middle;
+        color: @blue-2;
+        text-transform: uppercase;
+        font-size: 14px;
+        .font-medium;
+      }
+    }
+  }
+}

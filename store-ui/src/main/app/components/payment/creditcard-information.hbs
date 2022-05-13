@@ -1,0 +1,110 @@
+<div class="form-group">
+    <label for="cardNumber" class="control-label">{{t 'payment.credit-card.number.label'}}</label>
+    <a data-toggle="tooltip" data-placement="top" data-original-title="{{t 'payment.credit-card.number.tooltip'}}"><i class='glyphicon glyphicon-info-sign'></i></a>
+    <input id="cardNumber" data-checkout="cardNumber" class="form-control" placeholder="{{t 'payment.credit-card.number.placeholder'}}" value="{{cardNumber}}"/>
+</div>
+<div class="row">
+    <div class="col-md-5">
+        <div class="form-group">
+            <label for="creditCardType" class="control-label">{{t 'payment.credit-card.type.label'}}</label>
+            <select id="creditCardType" data-checkout="creditCardType" class="form-control select2-control select-expiration">
+                {{#select creditCardType}}
+                    {{#each creditCardTypes as |type|}}
+                        {{#with type}}
+                            <option value="{{type.id}}">{{type.name}}</option>
+                        {{/with}}
+                    {{/each}}
+                {{/select}}
+            </select>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="form-group">
+            <label for="creditCardIssuer" class="control-label">{{t 'payment.credit-card.issuer.label'}}</label>
+            <a data-toggle="tooltip" data-placement="top" data-original-title="{{t 'payment.credit-card.issuer.tooltip'}}"><i class='glyphicon glyphicon-info-sign'></i></a>
+            <select id="creditCardIssuer" data-checkout="creditCardIssuer" class="form-control select2-control select-expiration">
+                {{#each issuers as |creditCardIssuer|}}
+                    {{#with creditCardIssuer}}
+                        <option value="{{creditCardIssuer.id}}">{{creditCardIssuer.name}}</option>
+                    {{/with}}
+                {{/each}}
+            </select>
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <label for="cardHolderName" class="control-label">{{t 'payment.credit-card.name.label'}}</label>
+    <a data-toggle="tooltip" data-placement="top" data-original-title="{{t 'payment.credit-card.name.tooltip'}}"><i class='glyphicon glyphicon-info-sign'></i></a>
+    <input id="cardHolderName" data-checkout="cardholderName" class="form-control" placeholder="{{t 'payment.credit-card.name.placeholder'}}" value="{{cardHolderName}}"/>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="docType" class="control-label">{{t 'payment.document-type.label'}}</label>
+            <a data-toggle="tooltip" data-placement="top" data-original-title="{{t 'payment.document-type.tooltip'}}"><i class='glyphicon glyphicon-info-sign'></i></a>
+            <select id="docType" data-checkout="docType" class="form-control select2-control select-expiration">
+                {{#select docType}}
+                    {{#each identificationTypes as |identificationType|}}
+                        {{#with identificationType}}
+                            <option value="{{identificationType.id}}">{{identificationType.name}}</option>
+                        {{/with}}
+                    {{/each}}
+                {{/select}}
+            </select>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="docNumber" class="control-label">{{t 'payment.document-number.label'}}</label>
+            <a data-toggle="tooltip" data-placement="top" data-original-title="{{t 'payment.document-number.tooltip'}}"><i class='glyphicon glyphicon-info-sign'></i></a>
+            <input id="docNumber" data-checkout="docNumber" class="form-control" placeholder="{{t 'payment.document-number.placeholder'}}" value="{{docNumber}}"/>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="securityCode" class="control-label">{{t 'payment.credit-card.card-security-code.label'}}</label>
+            <a data-toggle="tooltip" data-placement="top" data-original-title="{{t 'payment.credit-card.card-security-code.tooltip'}}"><i class='glyphicon glyphicon-info-sign'></i></a>
+            <input id="securityCode" data-checkout="securityCode" class="form-control" placeholder="{{t 'payment.credit-card.card-security-code.placeholder'}}" value="{{securityCode}}"/>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-6">
+                    <label for="cardExpirationMonth" class="control-label">{{t 'payment.credit-card.expiration-month.label'}}</label>
+                    <select id="cardExpirationMonth" data-checkout="cardExpirationMonth" class="form-control select2-control select-expiration">
+                        {{#select cardExpirationMonth}}
+                            <option value="1">01</option>
+                            <option value="2">02</option>
+                            <option value="3">03</option>
+                            <option value="4">04</option>
+                            <option value="5">05</option>
+                            <option value="6">06</option>
+                            <option value="7">07</option>
+                            <option value="8">08</option>
+                            <option value="9">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        {{/select}}
+                    </select>
+                </div>
+                <div class="col-xs-6">
+                    <label for="cardExpirationYear" class="control-label">{{t 'payment.credit-card.expiration-year.label'}}</label>
+                    <select id="cardExpirationYear" data-checkout="cardExpirationYear" class="form-control select2-control select-expiration">
+                        {{#select cardExpirationYear}}
+                            {{#each years as |year|}}
+                                {{#with year}}
+                                    <option value="{{year}}">{{year}}</option>
+                                {{/with}}
+                            {{/each}}
+                        {{/select}}
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>

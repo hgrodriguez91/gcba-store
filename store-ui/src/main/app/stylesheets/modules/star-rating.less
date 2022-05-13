@@ -1,0 +1,36 @@
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 16px;
+
+  span.star {
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+
+    &:before {
+      content: "\f006";
+      color: #777777;
+    }
+
+    &.selected:before,
+    &.selected ~ span.star:before {
+      content: "\f005";
+      color: #000000;
+    }
+  }
+
+  &.editable {
+    span.star {
+      &:hover {
+        cursor: pointer;
+      }
+      &:hover:before,
+      &:hover ~ span.star:before {
+        content: "\f005";
+        color: #000000;
+      }
+    }
+  }
+}

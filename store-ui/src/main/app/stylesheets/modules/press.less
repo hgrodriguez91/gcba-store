@@ -1,0 +1,88 @@
+.press-home {
+  padding: 30px 0;
+
+  .break(sm, {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  });
+
+  .break(md, {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  });
+
+  .phrases {
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  .phrase {
+    .phrase-body {
+      padding: 0 40px;
+      font-size: 17px;
+      margin-bottom: 15px;
+      .font-medium;
+
+      .break(sm, {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 25px;
+      });
+
+      .break(md, {
+        padding: 0 180px;
+      });
+    }
+
+    .phrase-owner {
+      text-transform: uppercase;
+
+      h4 {
+        margin: 0;
+        font-size: 13px;
+        .font-book;
+
+        .break(sm, {
+          font-size: 17px;
+        });
+      }
+    }
+    .phrase-origin {
+      font-size: 12px;
+      margin-bottom: 20px;
+
+      .break(sm, {
+        font-size: 14px;
+        margin-bottom: 40px;
+      });
+    }
+  }
+
+  .brands {
+    border-top: #FFF solid 1px;
+    border-bottom: #FFF solid 1px;
+    margin: 0 20px;
+
+    .break(sm, {
+      margin: 0;
+    });
+
+    .break(md, {
+      padding: 10px 0;
+    });
+
+  ul {
+      & > li {
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+
+        img {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+}

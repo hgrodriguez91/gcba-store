@@ -1,0 +1,83 @@
+.responsive-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  ul {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    li {
+      position: absolute;
+      top: 18px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: 0.5s 0s all;
+      z-index: 1;
+      &.active-slide {
+        z-index: 2;
+        opacity: 1;
+      }
+      > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .image-as-background {
+    img {
+      display: none;
+    }
+  }
+
+  .arrow {
+    display: block;
+    background: transparent url("jssor-slider/img/a11.png") no-repeat scroll 0 0;
+    cursor: pointer;
+    height: 50px;
+    overflow: hidden;
+    position: absolute;
+    width: 40px;
+    z-index: 999;
+    top: ~"calc(50% - 30px)";
+    .break(xxs only, {
+      transform: scale(0.8);
+    });
+    .break(md, {
+        display: none;
+    });
+    &.prev {
+      left: 2%;
+      background-position: -250px -35px;
+      &:hover {
+          background-position: -10px -35px;
+      }
+      &:active {
+          background-position: -130px -35px;
+      }
+    }
+    &.next {
+      right: 2%;
+      background-position: -310px -35px;
+      &:hover {
+          background-position: -70px -35px;
+      }
+      &:active {
+          background-position: -190px -35px;
+      }
+    }
+  }
+
+  &:hover {
+    .arrow {
+      display: block;
+    }
+  }
+}

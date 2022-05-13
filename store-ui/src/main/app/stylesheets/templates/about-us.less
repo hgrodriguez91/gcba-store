@@ -1,0 +1,109 @@
+.about-us-page {
+
+  .slide-header-content {
+    .container {
+      padding-top: 40px;
+
+      .break(md, {
+        padding-top: 70px;
+      });
+    }
+  }
+
+  .history {
+    .break(md, {
+      padding-top: (@grid-gutter-width * 2);
+    });
+  }
+
+  blockquote {
+    padding: @grid-gutter-width (@grid-gutter-width * 2);
+    display: table;
+    width: 100%;
+
+    .break(sm, {
+      height: 120px;
+    });
+
+    .break(md, {
+      height: 140px;
+    });
+
+    p {
+      display: table-cell;
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  .testimonials {
+    border-top: #ebebeb solid 1px;
+    border-bottom: #ebebeb solid 1px;
+    margin-left: (@grid-gutter-width * -1);
+    margin-right: (@grid-gutter-width * -1);
+    margin-top: @grid-gutter-width;
+    padding: (@grid-gutter-width / 2) @grid-gutter-width 0;
+
+    .break(sm, {
+      margin-bottom: (@grid-gutter-width * 2);
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+    });
+
+    .break(md, {
+      padding-top: (@grid-gutter-width * 1.5);
+    });
+
+    ul {
+      .break(md, {
+        margin-left: (@grid-gutter-width * 2);
+        margin-right: (@grid-gutter-width * 2);
+      });
+    }
+
+    li {
+      margin-bottom: (@grid-gutter-width * 1.5);
+
+      .break(sm, {
+        margin-bottom: 0;
+      });
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .testimony {
+    .break(sm, {
+      height: 220px;
+    });
+
+    .break(md, {
+      margin: 0 (@grid-gutter-width / 2);
+      height: 240px;
+      margin-top: (@grid-gutter-width / 2);
+    });
+  }
+
+  .brand {
+    img {
+      height: 25px;
+
+      .break(md, {
+        height: 30px;
+      });
+    }
+    p {
+      padding-top: 5px;
+
+      .break(md, {
+        font-size: 14px;
+      });
+    }
+  }
+
+
+}

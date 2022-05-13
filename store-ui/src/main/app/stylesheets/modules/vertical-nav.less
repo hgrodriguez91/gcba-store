@@ -1,0 +1,29 @@
+.vertical-nav {
+  position: fixed;
+  top: 35px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #ffffff;
+
+  .break(sm, {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+  });
+
+  .nav {
+    & > li {
+      & > a {
+        .break(sm, {
+          text-align: left;
+          padding-left: @grid-gutter-width;
+        });
+        .break(md, {
+          padding-left: (@grid-gutter-width * 1.5);
+        });
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.normal-page-header(@bottom-serrated-color: #fff, @backgroundUrl: '../img/header-bg-default.jpg') {
+  //background: url(@backgroundUrl) no-repeat scroll center center / cover;
+/*   .border-bottom-serrated(@serrated-border-size, @bottom-serrated-color); */
+  background: #fff;
+  position: relative;
+  .container {
+    .border-bottom-gradient();
+    color: #000000;
+    text-align: center;
+    padding: 30px 0 80px;
+
+    .break(xs, {
+      padding-bottom: 40px;
+    });
+
+    h1 {
+      .font-bold-raleway-extra;
+      font-size: 42px;
+      color: inherit;
+
+      .break(md, {
+        font-size: 55px;
+      });
+    }
+
+    h3 {
+      font-size: 20px;
+      color: inherit;
+      line-height: 25px;
+      .break(md, {
+        font-size: 24px;
+      });
+    }
+  }
+}

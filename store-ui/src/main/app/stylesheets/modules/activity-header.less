@@ -1,0 +1,130 @@
+.activity-header {
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  .border-bottom-gradient(@bg-box-lighter-grey-bg);
+  color: #fff;
+  width: 100%;
+
+  &.side-brand {
+    > .container {
+      .break(sm, {
+        padding-right: @activity-header-side-brand-width;
+      });
+    }
+  }
+
+  .activity-header-nav {
+    padding-top: 15px;
+    
+    .break(sm, {
+      text-align: left;
+      font-size: 20.07pt;
+    });
+  }
+
+  a {
+    color: #000000;
+  }
+
+  .location {
+    .font-regular-raleway;
+  }
+
+  > .container {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    height: 100%;
+    color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    h1 {
+      text-align: center;
+      .font-bold-raleway-extra;
+      color: #000000;
+      font-size: 28pt;
+      padding: 0;
+      margin: 0 0 25px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.3;
+      .break(xs, {
+        font-size: 34px;
+      });
+      .break(sm, {
+        text-align: center;
+        font-size: 38pt;
+      });
+      .break(md, {
+        font-size: 42pt;
+      });
+      .break(lg, {
+        font-size: 42pt;
+      });
+      .break(xl, {
+        font-size: 42pt;
+      });
+    }
+
+    p {
+      font-size: 14px;
+      .break(xs, {
+        font-size: 16px;
+      });
+      .break(sm, {
+        font-size: 26px;
+      });
+    }
+  }
+
+  nav {
+    &.breadcrumbs {
+      background: rgba(0, 0, 0, 0.4) none repeat scroll 0 0;
+
+      .container {
+        padding-top: 7px;
+        padding-bottom: 7px;
+
+        ul {
+          margin: 0;
+
+          li {
+            line-height: 2em;
+            position: relative;
+
+            &:nth-child(2) {
+              padding-left: 15px;
+              padding-right: 5px;
+
+              &::before {
+                content: "|";
+                font-size: 1.5em;
+                line-height: 1.3em;
+                position: absolute;
+                left: 0;
+                top: 0;
+              }
+            }
+            &:nth-child(n+3) {
+              padding-left: 13px;
+              padding-right: 7px;
+
+              &::before {
+                content: "·";
+                font-size: 1.5em;
+                line-height: 1.3em;
+                position: absolute;
+                left: 0;
+                top: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

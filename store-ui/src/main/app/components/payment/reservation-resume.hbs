@@ -1,0 +1,76 @@
+<div class="col-sm-5 col-md-4 col-sm-offset-1">
+    <div class="labeled-box reservation-resume">
+        <!--<span class="labeled-box-flag"><i class="labeled-box-flag-icon fa fa-lock"></i> {{t 'payment.reservation-resume.safe-site'}}</span>-->
+        <div class="labeled-box-body">
+            <div class="reservation-resume-info">
+                <h2>{{activityTitle}}</h2>
+                <div class="reservation-resume-image">
+                    <img src="{{activityImage}}" alt="{{activityTitle}}"/>
+                </div>
+                <div class="reservation-resume-detail">
+                    <div><i class="fa fa-calendar" aria-hidden="true"></i><span class="highlight"> {{parseBookingDate bookingDate}} {{time bookingTime}}</span></div>
+                    <div><i class="fa fa-map-marker"></i><span> {{location}}</span></div>
+                </div>
+                <div class="reservation-resume-table">
+                	{{#if discount}}
+                    <div class="reservation-resume-tr">
+                        <div class="reservation-resume-td">
+                            <i class="fa fa-tag" aria-hidden="true"></i><span> {{t 'booking.details.discount'}}</span>
+                        </div>
+                        <div class="reservation-resume-td price">
+                            <span>{{discount}}%</span>
+                        </div>
+                    </div>
+                	{{/if}}
+
+                    {{#each optionsRate as |rate|}}
+                        <div class="reservation-resume-tr">
+                            <div class="reservation-resume-td">
+                                <div><i class="fa fa-user" aria-hidden="true"></i><span class="highlight"> {{rate.quantity}} {{rate.name}} </span> </div>
+                            </div>
+
+                            <div class="reservation-resume-td price">
+                                <span>{{rate.price.currency}} {{rate.price.amount}}</span>
+                            </div>
+                        </div>
+
+                    {{/each}}
+                    
+                    {{#activityShowDiscountAmount discountAmount}}
+                    <div class="reservation-resume-tr">
+                        <div class="reservation-resume-td">
+                            <i class="fa fa-money" aria-hidden="true"></i><span> {{t 'booking.details.discount-amount'}}</span>
+                        </div>
+                        <div class="reservation-resume-td price">
+                            <span>{{moneyToNegative discountAmount}}</span>
+                        </div>
+                    </div>
+                    {{/activityShowDiscountAmount}}
+                    <div class="reservation-resume-tr">
+                        <div class="reservation-resume-td">
+
+                        </div>
+                    </div>
+                    <div class="reservation-resume-tr">
+                        <div class="reservation-resume-td">
+                            <i class="fa fa-money" aria-hidden="true"></i><span> {{t 'payment.reservation-resume.total-price'}}</span>
+                        </div>
+                        <div class="reservation-resume-td price">
+                            <span>{{money totalPayment}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reservation-resume-pricing">
+                <div class="title-payment">{{t 'booking.details.booking-payment'}}</div>
+                <div class="total-payment">
+                    <span>{{money bookingPayment}}</span>
+                </div>
+                <div class="pending-payment">
+                    <span>{{t 'payment.reservation-resume.payment-on-site'}}</span><br>
+                    <span class="highlight">{{money openBalance}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
